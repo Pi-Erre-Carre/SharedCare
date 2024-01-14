@@ -1,0 +1,3520 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pierre Walthéry">
+
+<title>Shared care</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="2023_resub_files/libs/clipboard/clipboard.min.js"></script>
+<script src="2023_resub_files/libs/quarto-html/quarto.js"></script>
+<script src="2023_resub_files/libs/quarto-html/popper.min.js"></script>
+<script src="2023_resub_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="2023_resub_files/libs/quarto-html/anchor.min.js"></script>
+<link href="2023_resub_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="2023_resub_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="2023_resub_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="2023_resub_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="2023_resub_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Shared care</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Pierre Walthéry </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="abstract" class="level2">
+<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
+<p>Sharing of childcare between mothers and fathers has traditionally been associated with the quality of the parental relationship, and the subjective well-being (SWB) of children. Yet not much is known about its direct association with parental SWB. This may be due to shortcomings in the current research on fathers’ involvement in childcare, characterised by little distinction between types of childcare; a reliance on stylised instruments for recording the time spent caring; operationalisation of SWB mainly via cognitive instruments (ie life satisfaction), unlikely to be affected by variations in daily circumstances. Using the 2015 UK Time Use Survey on a subsample of dual-earning households, we modelled the association between the precise share of several types of childcare done by fathers and the daily enjoyment levels of parents, an innovative measure of SWB. Control variables included whether activities were recorded on weekdays or at the weekend and the time spent by fathers on childcare. Parental daily enjoyment was found asymmetrically associated with the share of childcare done by fathers: mothers reported an improvement when fathers took a moderate share, whereas a more substantial involvement was associated with higher levels of paternal SWB. Both were affected by the absolute amount of time parents dedicate to childcare.</p>
+</section>
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+<p>Over the recent years, policymakers have shown a renewed interest for the division of caring roles between men and women in heterosexual families, and how these could be rebalanced. One driving reason for this lies in the part they play in the persistence of the gender wage gap, as the unequal division of unpaid care between men and women has been identified as its leading root (<span class="citation" data-cites="GEO2019">Government Equalities Office (<a href="#ref-GEO2019" role="doc-biblioref">2019</a>)</span>). The fact that women perform a ‘second shift’, as they still carry out - or are often expected to - most of the housework, household management and care roles within their families hamper their ability to compete with men on the labour market (<span class="citation" data-cites="Hochschild1989">Hochschild (<a href="#ref-Hochschild1989" role="doc-biblioref">1989</a>)</span>). Although there has been an increase in the amount of time fathers spend with children (<span class="citation" data-cites="Craig2014">Craig, Powell, and Smyth (<a href="#ref-Craig2014" role="doc-biblioref">2014</a>)</span>; <span class="citation" data-cites="Gracia2015">Gracia and Esping-Andersen (<a href="#ref-Gracia2015" role="doc-biblioref">2015</a>)</span>), a trend reinforced by the Covid-19 pandemic, the gender gap in childcare persists especially during the early years of a child’s life (<span class="citation" data-cites="Fatherhood2016">Fatherhood Institute (<a href="#ref-Fatherhood2016" role="doc-biblioref">2016</a>)</span>; <span class="citation" data-cites="ONS2020">ONS (<a href="#ref-ONS2020" role="doc-biblioref">2020</a>)</span>). At the same time, a growing number of fathers, especially among the younger generation, express the wish to be more involved in care-giving, even if this means sacrificing some of their earnings in the process (<span class="citation" data-cites="Working2017">Working Families (<a href="#ref-Working2017" role="doc-biblioref">2017</a>)</span>; <span class="citation" data-cites="Burgess2021">Burgess and Goldman (<a href="#ref-Burgess2021" role="doc-biblioref">2021</a>)</span>). Societal expectations requiring fathers to be breadwinners and mothers caregivers (<span class="citation" data-cites="Scott2013">Scott (<a href="#ref-Scott2013" role="doc-biblioref">2013</a>)</span>; <span class="citation" data-cites="Taylor2018">Taylor (<a href="#ref-Taylor2018" role="doc-biblioref">2018</a>)</span>) and the fear that involvement in childcare will negatively affect their career prospects (<span class="citation" data-cites="Chung2018">Heejung Chung and Horst (<a href="#ref-Chung2018" role="doc-biblioref">2018</a>)</span>) explain why fathers still feel unable to contribute more. Similarly, women’s decisions to engage in paid work remain influenced by traditional gender norms, such as the view that preschool children will suffer if their mother work, and that family life suffers when a woman has a full-time job (<span class="citation" data-cites="Scott2013">Scott (<a href="#ref-Scott2013" role="doc-biblioref">2013</a>)</span>). In order to alter social representations about the respective involvement of mothers and fathers in childcare, it is necessary to scrutinise the beliefs about paternal participation in childcare and its consequences. Previous research has challenged these norms by providing evidence of the positive outcomes for children of fathers’ involvement in childcare, (for a review, see <span class="citation" data-cites="Allen2007a">Allen and Daly (<a href="#ref-Allen2007a" role="doc-biblioref">2007</a>)</span>; <span class="citation" data-cites="Chung2021">H. Chung (<a href="#ref-Chung2021" role="doc-biblioref">2021</a>)</span>) as well as for the stability of and satisfaction with the parental relationship (<span class="citation" data-cites="Norman2018">Norman, Elliot, and Fagan (<a href="#ref-Norman2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="Schober2012">Schober (<a href="#ref-Schober2012" role="doc-biblioref">2012</a>)</span>, <span class="citation" data-cites="Schober2013">Schober (<a href="#ref-Schober2013" role="doc-biblioref">2013</a>)</span>). However, these studies restricted the measurement of father’s involvement in childcare to specific activities according to the age of their children (e.g., <span class="citation" data-cites="Huerta2014">Huerta et al. (<a href="#ref-Huerta2014" role="doc-biblioref">2014</a>)</span>; <span class="citation" data-cites="Kroll2016">Kroll et al. (<a href="#ref-Kroll2016" role="doc-biblioref">2016</a>)</span>; <span class="citation" data-cites="Nomaguchi2017">K. Nomaguchi, Brown, and Leyman (<a href="#ref-Nomaguchi2017" role="doc-biblioref">2017</a>)</span>; <span class="citation" data-cites="Norman2018">Norman, Elliot, and Fagan (<a href="#ref-Norman2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="Twamley2013">Twamley et al. (<a href="#ref-Twamley2013" role="doc-biblioref">2013</a>)</span>). Such approaches not only overlook the actual amount of time fathers spend on childcare, but also how it is shared between parents. Among contributions that rely on the time spent with children as a measure of involvement (e.g., <span class="citation" data-cites="Baxter2011">Baxter and Smart (<a href="#ref-Baxter2011" role="doc-biblioref">2011</a>)</span>), many do not distinguish between different categories of care – e.g.&nbsp;routine vs non-routine, solo vs.&nbsp;joint care. Being able to distinguish between these is crucial in order to identify factors that may encourage fathers to dedicate more time caring as the main caregiver, which is critical in supporting mothers’ labour market participation. Finally, among the limited number of studies that have focused on the well-being of parents, most (e.g. <span class="citation" data-cites="Glass2016">Glass, Andersson, and Simon (<a href="#ref-Glass2016" role="doc-biblioref">2016</a>)</span>; <span class="citation" data-cites="Schober2016">Schober and Stahl (<a href="#ref-Schober2016" role="doc-biblioref">2016</a>)</span>) have relied on cognitive instruments to capture it – typically, life satisfaction. A potential downside is that these tend not to be responsive to short or medium-term changes in one’s circumstances, such as day-to day variation in the share of childcare carried out by each parent. Studies have also tended to focus directly on the negative outcomes of the division of childcare, for example, marital satisfaction and dissolution (e.g., <span class="citation" data-cites="Frisco2003">Frisco and Williams (<a href="#ref-Frisco2003" role="doc-biblioref">2003</a>)</span>; <span class="citation" data-cites="Norman2018">Norman, Elliot, and Fagan (<a href="#ref-Norman2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="Ruppanner2018">Ruppanner, Brandén, and Turunen (<a href="#ref-Ruppanner2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="Schober2012">Schober (<a href="#ref-Schober2012" role="doc-biblioref">2012</a>)</span>; <span class="citation" data-cites="Schober2013">Schober (<a href="#ref-Schober2013" role="doc-biblioref">2013</a>)</span>), stress and negative well-being outcomes (<span class="citation" data-cites="Milkie2002">Milkie et al. (<a href="#ref-Milkie2002" role="doc-biblioref">2002</a>)</span>; <span class="citation" data-cites="Nomaguchi2017">K. Nomaguchi, Brown, and Leyman (<a href="#ref-Nomaguchi2017" role="doc-biblioref">2017</a>)</span>) rather than investigating its broader positive and negative impacts, in particular on well-being. This paper aims to fill some of these gaps; first, by exploring how the time fathers spend with children is associated with short-term variations in their well-being. We were able to do so by using an innovative instrument captured in time-diaries namely daily enjoyment, as a well-being indicator. Finally, by using the 2015 UK Time Use Survey, we were able to investigate examine the share of the time spent by fathers looking after children within the household, separately for different types of childcare.</p>
+</section>
+<section id="background" class="level1">
+<h1>Background</h1>
+<section id="typologies-of-care" class="level2">
+<h2 class="anchored" data-anchor-id="typologies-of-care">Typologies Of Care</h2>
+<p>Craig and Mullan (2011) have argued that when trying to assess the impact of childcare on outcomes, relying on the total time spent caring by each parent is insufficient. Examining how parents share different types of childcare is necessary in order to understand its gendered dynamics. Furthermore, as childcare can be recorded as a caregiver’s main- or secondary activity, for example, alongside housework or paid work, it is important to take both types into account (<span class="citation" data-cites="Craig2011">Craig and Powell (<a href="#ref-Craig2011" role="doc-biblioref">2011</a>)</span>).</p>
+<p>Mothers are more likely to provide childcare, but also to be responsible for its routine aspects, whereas fathers are more likely to engage in the non-routine types of care (<span class="citation" data-cites="Craig2006">Craig (<a href="#ref-Craig2006" role="doc-biblioref">2006</a>)</span>; <span class="citation" data-cites="Craig2011">Craig and Powell (<a href="#ref-Craig2011" role="doc-biblioref">2011</a>)</span>; <span class="citation" data-cites="Craig2011a">Craig and Mullan (<a href="#ref-Craig2011a" role="doc-biblioref">2011</a>)</span>). Routine childcare entails the physical care of children, such as feeding, cleaning/bathing, routine bedtime activities, or taking children to school. Non-routine or enrichment/educational care involves talking, reading and play-centred activities. They are labelled as ‘enrichment’ as they augment a child’s capital of experiences for educational purposes. Only when fathers take on some of the more rigid routine care duties, which are more likely to conflict with work schedules, can mothers be relieved of some of the pressures affecting their ability to meet their work demands. Fixed family routines (such as school drop off/pick up and mealtimes) combined with inflexible work schedules will limit women’s ability to step up their participation in paid work (Chung &amp; van der Horst, 2018). In contrast, playing with and reading to children fit more easily a parent’s schedule, and may not pose as much of a barrier towards involvement in paid work.</p>
+<p>In this study, we chose to study childcare when carried out by a parent on her/his own rather than alongside the other parent as in the latter case, the time fathers spend on childcare does not free mothers to conduct other pursuits. Craig (2006) also argues that when mothers and fathers jointly look after children, mothers tend to assume the primary responsibility for it, whereas father keep a supporting role. Consequently, the mental load of planning and managing childcare in such cases disproportionately remains on mothers (see also <span class="citation" data-cites="Walzer1996">Walzer (<a href="#ref-Walzer1996" role="doc-biblioref">1996</a>)</span>).</p>
+</section>
+<section id="shared-care-and-parental-subjective-well-being" class="level2">
+<h2 class="anchored" data-anchor-id="shared-care-and-parental-subjective-well-being">Shared care and parental subjective well-being</h2>
+<p>Commonly defined as “a broad category of phenomena that includes people’s emotional responses, domain satisfactions, and global judgments of life satisfaction” (<span class="citation" data-cites="Diener1999">Diener et al. (<a href="#ref-Diener1999" role="doc-biblioref">1999</a>)</span>: 277), Subjective Well Being (SWB) is often associated with socially desirable outcomes, be it job- or health related (<span class="citation" data-cites="Lyubomirsky2005">Lyubomirsky, King, and Diener (<a href="#ref-Lyubomirsky2005" role="doc-biblioref">2005</a>)</span>; <span class="citation" data-cites="Pressman2005">Pressman and Cohen (<a href="#ref-Pressman2005" role="doc-biblioref">2005</a>)</span>). Whereas the evaluative/cognitive dimension of SWB such as life satisfaction has been the focus of most of the literature, possibly due to the wide availability of instruments in mainstream social surveys, the more versatile affective side of SWB has been lagging, with few large-scale study considering this aspect.</p>
+<p>Studies found patterns of association between SWB and involvement in childcare as well as how childcare is shared between parents. An unequal division of childcare has been associated with low relationship satisfaction and marital dissolution across several countries (<span class="citation" data-cites="Carlson2016">Carlson, Hanson, and Fitzroy (<a href="#ref-Carlson2016" role="doc-biblioref">2016</a>)</span>; <span class="citation" data-cites="Kalmijn1999">Kalmijn (<a href="#ref-Kalmijn1999" role="doc-biblioref">1999</a>)</span>; <span class="citation" data-cites="Norman2018">Norman, Elliot, and Fagan (<a href="#ref-Norman2018" role="doc-biblioref">2018</a>)</span>; <span class="citation" data-cites="Schober2012">Schober (<a href="#ref-Schober2012" role="doc-biblioref">2012</a>)</span>) largely due to its impact on parental well-being and stress levels. As they are generally responsible of a larger share of childcare and housework (<span class="citation" data-cites="Taylor2018">Taylor (<a href="#ref-Taylor2018" role="doc-biblioref">2018</a>)</span>), mothers, and especially working mothers are more likely to experience low well-being as a results of the pressures coming from work and family demands (<span class="citation" data-cites="Chandola2019">Chandola et al. (<a href="#ref-Chandola2019" role="doc-biblioref">2019</a>)</span>; <span class="citation" data-cites="Ruppanner2018">Ruppanner, Brandén, and Turunen (<a href="#ref-Ruppanner2018" role="doc-biblioref">2018</a>)</span>).</p>
+<p>Ruppanner et al.&nbsp;(2018) found that although both parents experience time pressure following the birth of children, mothers do so more than fathers. This may result in a deterioration of their mental health in particular for those with two or more children. It could therefore be inferred that relieving mothers from the demands of childcare and housework could improve their stress levels. A study comparing parental happiness across 22 countries found that parenthood was not associated with lower levels of happiness in countries with generous state support for parents(<span class="citation" data-cites="Glass2016">Glass, Andersson, and Simon (<a href="#ref-Glass2016" role="doc-biblioref">2016</a>)</span>) . Similarly, Schober &amp; Stahl (2016) showed how the expansion of full-time childcare facilities in Germany was associated with mothers experiencing greater satisfaction with family life, and with life overall. In sum, improved maternal well-being levels can be expected where support for childcare responsibilities is present. This can originate from state policies, but also from fathers taking on a larger share of childcare.</p>
+<p>Although parenthood often brings about increased stress-levels and is linked to lower life satisfaction, it also can impact positively well-being. Negraia and Augustine (2020) using data from the American Time Use Survey found that when carrying out their daily activities, parents expressed higher levels of happiness than non-parents, and that this was largely driven by having a child present. In addition to being a source of love and intimacy, children may provide adults with opportunities to feel valued as they perform a socially desirable role as parents. (<span class="citation" data-cites="Nomaguchi2003">K. M. Nomaguchi and Milkie (<a href="#ref-Nomaguchi2003" role="doc-biblioref">2003</a>)</span>; <span class="citation" data-cites="Negraia2020">Negraia and Augustine (<a href="#ref-Negraia2020" role="doc-biblioref">2020</a>)</span>). This may be especially true for fathers, as mothers already take on the bulk of childcare. In fact, fathers who are involved in childcare have been shown to experience greater job satisfaction, work-family enrichment, and less work-family conflict (<span class="citation" data-cites="Ladge2015">Ladge et al. (<a href="#ref-Ladge2015" role="doc-biblioref">2015</a>)</span>).</p>
+<p>As it mostly consists of playful and stimulating activities, enrichment childcare is likely to be the type of childcare most enjoyed by parents (<span class="citation" data-cites="Craig2014">Craig, Powell, and Smyth (<a href="#ref-Craig2014" role="doc-biblioref">2014</a>)</span>). This may be especially the case for fathers, as enrichment activities seems to readily fit in with representations of the caring masculinity identity (<span class="citation" data-cites="Brandth1998">Brandth and Kvande (<a href="#ref-Brandth1998" role="doc-biblioref">1998</a>)</span>). Conversely, fathers’ involvement in the more “feminine” routine childcare may not necessarily be associated with improved well-being.</p>
+<p>On the other hand, one could expect that given the prevailing imbalance between parents, sharing any type of care would have a positive impact on mothers’ well-being. It may also be that a more even balancing of routine childcare between parents will be especially impactful on mother’s well-being (<span class="citation" data-cites="Nomaguchi2017">K. Nomaguchi, Brown, and Leyman (<a href="#ref-Nomaguchi2017" role="doc-biblioref">2017</a>)</span>). When fathers take on a greater share of routine childcare mothers might feel relieved of the time-pressures they often experience (<span class="citation" data-cites="Chandola2019">Chandola et al. (<a href="#ref-Chandola2019" role="doc-biblioref">2019</a>)</span>).</p>
+</section>
+<section id="summary-and-hypotheses" class="level2">
+<h2 class="anchored" data-anchor-id="summary-and-hypotheses">Summary And Hypotheses</h2>
+<p>Our overall hypothesis is that the greater the share of childcare taken on by fathers, the larger the improvement in well-being for mothers and fathers, particularly daily enjoyment. We would expect that a more balanced sharing of childcare, especially routine childcare, would improve maternal well-being by reducing their time-pressure and stress levels. We expect father’s well-being and enjoyment levels to increase as they are able to spend more time doing childcare, and taking on a larger role, especially in enrichment/non-routine childcare.</p>
+</section>
+</section>
+<section id="data-and-methods" class="level1">
+<h1>Data And Methods</h1>
+<section id="data" class="level2">
+<h2 class="anchored" data-anchor-id="data">Data</h2>
+<p>This study relies on the 2015 UK Time Use Survey (TUS). The TUS is a two-stage stratified random sample survey representative of non-institutional households in the UK. Data was collected through self-completed time diaries and face-to-face individual questionnaires. The time diaries recorded all activities in ten minutes slots over two 24h periods – one weekday and one day at the weekend. Respondents also recorded the location of activities, the presence of other people, their enjoyment level, and whether other, secondary activities took place at the same time. The diary days were randomly allocated over a period of one year and identical for all members of same household. Overall sample size is 11,421 individuals in 4,733 households. Of these, 8,210 individuals in 3,606 households provided complete time diary information. ## Sample The population of reference was defined as the days (in 2014-15) of UK households made of two cohabitating heterosexual adults with at least one child aged between 0 and 14, who were both employed, and during which at least one of the two parents recorded childcare-related activities in their time diary. The analysis was conducted on a matched household sample, where data from mothers and fathers were joined together. Single parent households, and households made of several families with children or multi-generational households were not retained, as relatives could provide care for children and interfere with the parenting dynamic studied here. Actual sample size was 568 days recorded in 284 such households with non-missing information about well-being and caring for children in the time diaries (1,140 days when including those with missing information). Such a reduced size constitutes one of the main limitations of our study as it limits the power of multivariate analysis and significance testing. It nonetheless remains a valid random sample from which inferences to the days of UK households can be made, albeit with caution.</p>
+</section>
+<section id="dependent-variables" class="level2">
+<h2 class="anchored" data-anchor-id="dependent-variables">Dependent Variables</h2>
+<p>Experienced well-being. Enjoyment of the activities reported in the time-diary was recorded on a scale ranging from 1 to 7. Due to limited sample size, it was decided not to break down enjoyment by types of childcare but instead to rely on an overall daily estimate. We computed it as the mean level of enjoyment of all non-resting activities over the course of a full day. For technical reasons, enjoyment in the UK TUS was only recorded from October 2014, resulting in about 25% item non-response. Another limitation of this study is therefore that sample sizes vary slightly between well-being outcomes. Evaluative well-being and life satisfaction. In order to enable for our results to remain comparable with other studies, we also used traditional measures of cognitive well-being:</p>
+<ul>
+<li>Life Satisfaction: ‘Overall, how satisfied are you with your life nowadays?’ Answers were recorded on a scale ranging from 0 (Not at all) to 10 (Completely). This indicator is widely used in social science. It is also currently part of the Office for National Statistics’ Personal and Economic Well-being indicators series (ONS 2019). For technical reasons, the scale of the variable was changed during fieldwork from seven to ten items. As a result, we decided to standardise then merge both variables into a single one, in order to avoid a loss of observations.</li>
+<li>Work-life balance satisfaction: ‘How dissatisfied or satisfied are you with your work-life/work-family balance?’</li>
+<li>Satisfaction with social life: ‘How dissatisfied or satisfied are you with your social life?’</li>
+</ul>
+<p>The latter two facets specific indicators of well-being are directly relevant to childcare and parenting, with answers ranging on as scale from 1 (Completely dissatisfied) to 7 (Completely satisfied):</p>
+</section>
+<section id="independent-variables" class="level2">
+<h2 class="anchored" data-anchor-id="independent-variables">Independent variables</h2>
+<p><em>Fathers share of childcare</em></p>
+<p>Our main independent variable is the amount of time spent by fathers on childcare relative to the total time spent looking after children in the household on a given day. We broke down childcare time according to the types developed above; routine vs non-routine/enrichment care (<span class="citation" data-cites="Craig2011">Craig and Powell (<a href="#ref-Craig2011" role="doc-biblioref">2011</a>)</span>), as well as whether it was provided by parents on their own – i.e., solo care, again excluding joint care in our analysis. We used a fourth type, primary childcare, defined as childcare recorded as main activity in order to capture the overall association between parental well-being and the overall amount of childcare performed.</p>
+<p>Table 1 provides a description of these different types in our data. Solo care was defined as care provided the parent when the other parent was not present at the same time.</p>
+<table class="table">
+<caption>Table 1. Categories of care ::: *as primary or secondary activities</caption>
+<colgroup>
+<col style="width: 22%">
+<col style="width: 20%">
+<col style="width: 57%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Category</th>
+<th>Concept</th>
+<th>Activities involved*</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Nature of care</td>
+<td>Routine</td>
+<td>Feeding, bathing, dressing, putting to bed, carrying, soothing, transport to school</td>
+</tr>
+<tr class="even">
+<td>-</td>
+<td>Enrichment/non routine care</td>
+<td>Talking, listening, teaching, helping children learn, reading, telling stories, and playing games etc..</td>
+</tr>
+<tr class="odd">
+<td>Involvement of the other parent</td>
+<td>Solo care</td>
+<td>When care is provided without the other parent involved</td>
+</tr>
+<tr class="even">
+<td>Primacy of care</td>
+<td>Primary</td>
+<td>Any childcare provided as the main activity by the parent, with or without other recorded activities</td>
+</tr>
+</tbody>
+</table>
+<p>For each one of these types, the number of minutes fathers spent caring was divided by the total caring time spent by mothers and fathers within each household then multiplied by 100. In order to account for the likely nonlinear effect of this variable on well-being, we derived a three-category ordinal version consisting of: fathers not doing any childcare on diary day (reference category); fathers taking on less than 40% of the childcare; fathers taking on 40% or more of the childcare. The cutting point was set at 40 % rather than 50% in order to alleviate the small number of fathers caring more than 50% of the time.</p>
+</section>
+<section id="modelling-strategy" class="level2">
+<h2 class="anchored" data-anchor-id="modelling-strategy">Modelling Strategy</h2>
+<p>We examined the bi- and multivariate association between the share of childcare taken on by fathers and well-being outcomes for mothers and fathers respectively, broken down by types of care. As observations consist of two days by respondent, regression results might be unreliable as the assumption of independence is violated. For this reason, we used a Generalized Estimating Equation model approach, a technique which has been shown to provide robust average estimates of the main effects (<span class="citation" data-cites="Gardiner2009">Gardiner, Luo, and Roman (<a href="#ref-Gardiner2009" role="doc-biblioref">2009</a>)</span>; <span class="citation" data-cites="Zeger1988">Zeger, Liang, and Albert (<a href="#ref-Zeger1988" role="doc-biblioref">1988</a>)</span>) in such cases. GEE models are robust to misspecification of the within person correlation structure of the error terms and the presence of small size cluster (<span class="citation" data-cites="Skrondal2004">Skrondal (<a href="#ref-Skrondal2004" role="doc-biblioref">2004</a>)</span>). Fixed effect regression would not be appropriate here as in all but one case the outcome remains invariant within respondents and also the size of the respondent-level effect is not of substantive interest here.</p>
+</section>
+<section id="control-variables" class="level2">
+<h2 class="anchored" data-anchor-id="control-variables">Control variables</h2>
+<p>We controlled for the socio-demographic characteristics of respondents, as they are known to influence the time spent on childcare (<span class="citation" data-cites="Craig2011">Craig and Powell (<a href="#ref-Craig2011" role="doc-biblioref">2011</a>)</span>) and well-being (<span class="citation" data-cites="Kroll2016">Kroll et al. (<a href="#ref-Kroll2016" role="doc-biblioref">2016</a>)</span>; <span class="citation" data-cites="Milkie2002">Milkie et al. (<a href="#ref-Milkie2002" role="doc-biblioref">2002</a>)</span>; <span class="citation" data-cites="Schober2012">Schober (<a href="#ref-Schober2012" role="doc-biblioref">2012</a>)</span>): parental education; household-level working-time configurations (one parent part-time, the other full-time, or both parents working full-time); age; and whether the day was a weekday or at the weekend. We also controlled for the absolute amount of time spent by mothers on childcare as it could influence the effect of sharing between parents. One could imagine for instance that the amount of childcare done by fathers could potentially have more impact on a day mothers are particularly busy with childcare.</p>
+</section>
+</section>
+<section id="results" class="level1">
+<h1>Results</h1>
+<div class="cell">
+<div class="cell-output-display">
+<table class="gmisc_table table table-sm table-striped small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="7" style="text-align: left;">Table 2: Sample characteristics</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; border-bottom: 1px solid grey; border-top: 2px solid grey;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Mothers</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Fathers</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Moth.n</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Fath.n</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">excl.cols1</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">excl.cols2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Degree</td>
+<td style="text-align: center;">0.48</td>
+<td style="text-align: center;">0.4</td>
+<td style="text-align: center;">406</td>
+<td style="text-align: center;">287</td>
+<td style="text-align: center;">406</td>
+<td style="text-align: center;">287</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Higher education</td>
+<td style="text-align: center;">0.11</td>
+<td style="text-align: center;">0.1</td>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">112</td>
+<td style="text-align: center;">93</td>
+<td style="text-align: center;">112</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Secondary or below</td>
+<td style="text-align: center;">0.41</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">347</td>
+<td style="text-align: center;">429</td>
+<td style="text-align: center;">347</td>
+<td style="text-align: center;">429</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">FT-No Flexible WT</td>
+<td style="text-align: center;">0.33</td>
+<td style="text-align: center;">0.08</td>
+<td style="text-align: center;">273</td>
+<td style="text-align: center;">61</td>
+<td style="text-align: center;">273</td>
+<td style="text-align: center;">61</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">FT+Flexible WT</td>
+<td style="text-align: center;">0.13</td>
+<td style="text-align: center;">0.5</td>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">446</td>
+<td style="text-align: center;">108</td>
+<td style="text-align: center;">446</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">PT-No Flexible WT</td>
+<td style="text-align: center;">0.17</td>
+<td style="text-align: center;">0.3</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">278</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">278</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">PT+Flexible WT</td>
+<td style="text-align: center;">0.18</td>
+<td style="text-align: center;">0.05</td>
+<td style="text-align: center;">161</td>
+<td style="text-align: center;">35</td>
+<td style="text-align: center;">161</td>
+<td style="text-align: center;">35</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: center;">34.4</td>
+<td style="text-align: center;">37</td>
+<td style="text-align: center;">850</td>
+<td style="text-align: center;">850</td>
+<td style="text-align: center;">850</td>
+<td style="text-align: center;">850</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">D-FT+M-FT</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">220</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">220</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">D-FT+M-PT</td>
+<td style="text-align: center;">0.24</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">203</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">203</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Other</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">301</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">301</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Youngest child is 0-4</td>
+<td style="text-align: center;">0.81</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">676</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">676</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Youngest child is 5-10</td>
+<td style="text-align: center;">0.19</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">174</td>
+<td style="text-align: center;">-</td>
+<td style="text-align: center;">174</td>
+<td style="text-align: center;">-</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; border-bottom: 2px solid grey;">Youngest child is 11-15</td>
+<td style="text-align: center; border-bottom: 2px solid grey;"></td>
+<td style="text-align: center; border-bottom: 2px solid grey;">-</td>
+<td style="text-align: center; border-bottom: 2px solid grey;"></td>
+<td style="text-align: center; border-bottom: 2px solid grey;">-</td>
+<td style="text-align: center; border-bottom: 2px solid grey;"></td>
+<td style="text-align: center; border-bottom: 2px solid grey;">-</td>
+</tr>
+</tbody><tfoot>
+<tr class="even">
+<td colspan="7" style="text-align: left;">Socio demographic characteristics of the matched<br>
+household sample N=850 days,878 mothers and fathers,439 households. Data: UK TUS 2015</td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<p>We can see that on average respondents tend to be more educated than the general population. The educational discrepancy between mothers and fathers is probably down to the fact that employed mothers tend to be more educated that those economically inactive. Also worth noting, even if unsurprising, the discrepancy between mothers and fathers in terms of flexible working-time provisions: close to 53% of households have women working some form of flexible hours (29+25%), whether on a full or part-time contract, against 38% of fathers having the same arrangements (26+2%). In most households (55%) mothers worked as secondary earner whilst fathers worked full time, against 39% of dual earner (both parents work full-time) households. Finally, 74% of households had at least one child below primary school age, which is not surprising given that these require the largest amount of caring and the sample selection required days in which as least one episode of childcare was recorded in the diary. For the same reasons, the number of households with children aged 10 or above is negligible.</p>
+<p>Table 3. Proportion of childcare carried out by fathers in dual-earner families by categories</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="gmisc_table table table-sm table-striped small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="7" style="text-align: left;">Table 3: sharing of childcare between mothers and fathers</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; border-bottom: 1px solid grey; border-top: 2px solid grey;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Not caring</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">&lt;40%</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">&gt;=40%</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Not caring</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">&lt;40%</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">&gt;=40%</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Primary caring</td>
+<td style="text-align: center;">0.30</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">247</td>
+<td style="text-align: center;">293</td>
+<td style="text-align: center;">292</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Secondary caring</td>
+<td style="text-align: center;">0.71</td>
+<td style="text-align: center;">0.19</td>
+<td style="text-align: center;">0.10</td>
+<td style="text-align: center;">599</td>
+<td style="text-align: center;">160</td>
+<td style="text-align: center;">80</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Total(any) caring</td>
+<td style="text-align: center;">0.26</td>
+<td style="text-align: center;">0.31</td>
+<td style="text-align: center;">0.43</td>
+<td style="text-align: center;">215</td>
+<td style="text-align: center;">261</td>
+<td style="text-align: center;">363</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sole caring</td>
+<td style="text-align: center;">0.53</td>
+<td style="text-align: center;">0.20</td>
+<td style="text-align: center;">0.27</td>
+<td style="text-align: center;">391</td>
+<td style="text-align: center;">150</td>
+<td style="text-align: center;">199</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Joint caring</td>
+<td style="text-align: center;">0.39</td>
+<td style="text-align: center;">0.36</td>
+<td style="text-align: center;">0.25</td>
+<td style="text-align: center;">325</td>
+<td style="text-align: center;">304</td>
+<td style="text-align: center;">209</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Routine caring</td>
+<td style="text-align: center;">0.35</td>
+<td style="text-align: center;">0.38</td>
+<td style="text-align: center;">0.27</td>
+<td style="text-align: center;">291</td>
+<td style="text-align: center;">310</td>
+<td style="text-align: center;">226</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left; border-bottom: 2px solid grey;">Enriched caring</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">0.37</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">0.27</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">0.37</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">253</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">183</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">254</td>
+</tr>
+</tbody><tfoot>
+<tr class="odd">
+<td colspan="7" style="text-align: left;">Three category proportion of the total caring time spent in the household<br>
+carried out by fathers, by type of caring. N=1,506 days, 753 mothers and<br>
+fathers, 377 households. Data: UK TUS 2015</td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<p>Socio-demographic characteristics of the matched household sample N= 568 days, 284 households. Data: UK TUS 2015</p>
+<p>Table 3 gives a first overview of the sharing of childcare between fathers and mothers in the sample. We can see that between 28 and 55% of fathers did not take part in any type of childcare on the day diaries were recorded. 72 % (45+27) of fathers in the sample reported engaging in primary childcare, with about one quarter reporting taking on 40% or more of the childcare. Interestingly 68% of fathers in the sample did some routine care against 52% who engaged in enriched care. This could be related to the fact that our sample is made of dual earners couples, which tend to have higher levels of qualification, and therefore fathers engaging more in childcare of any type (see also, Dotti Sani &amp; Treas, 2016). Unsurprisingly, there was no type of caring that a majority of fathers undertook more than mothers. The proportion of fathers reporting at least 40% of the childcare time in households in the sample ranged from 11% (enriched caring) to 27% (primary caring). In most cases a larger proportion of fathers (between 29% and 50%) took between 1 and 40% of the total amount of care given that day. It should be noted that these proportions vary according to whether the diary was recorded on a weekday or at the weekend: whereas 25.4% of fathers in the sample reported not doing any childcare on weekdays, only 18.6% did so at the weekend (not shown).</p>
+<div class="cell">
+<div class="cell-output-display">
+<table class="gmisc_table table table-sm table-striped small" data-quarto-postprocess="true">
+<colgroup>
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+<col style="width: 14%">
+</colgroup>
+<thead>
+<tr class="header">
+<th colspan="7" style="text-align: left;">Table 4. Mean immediate and evaluative well-being</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th" style="text-align: left; border-bottom: 1px solid grey; border-top: 2px solid grey;"></th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Mothers</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Fathers</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Moth.n</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">Fath.n</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">excl.cols1</th>
+<th data-quarto-table-cell-role="th" style="text-align: center; font-weight: 900; border-bottom: 1px solid grey; border-top: 2px solid grey;">excl.cols2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mean daily enjoyment</td>
+<td style="text-align: center;">5.8</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">378</td>
+<td style="text-align: center;">396</td>
+<td style="text-align: center;">378</td>
+<td style="text-align: center;">396</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Happiness</td>
+<td style="text-align: center;">7.3</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">295</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">295</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Worth</td>
+<td style="text-align: center;">8.1</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">295</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">295</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Life satisfaction</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">295</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">295</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Anxiety</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">293</td>
+<td style="text-align: center;">416</td>
+<td style="text-align: center;">293</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Satisfactipn with partner</td>
+<td style="text-align: center;">6.4</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">573</td>
+<td style="text-align: center;">408</td>
+<td style="text-align: center;">573</td>
+<td style="text-align: center;">408</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Work-life balance satisfaction</td>
+<td style="text-align: center;">4.8</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">779</td>
+<td style="text-align: center;">560</td>
+<td style="text-align: center;">779</td>
+<td style="text-align: center;">560</td>
+</tr>
+<tr class="even">
+<td style="text-align: left; border-bottom: 2px solid grey;">Satisfaction with social life</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">4.8</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">5</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">787</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">562</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">787</td>
+<td style="text-align: center; border-bottom: 2px solid grey;">562</td>
+</tr>
+</tbody><tfoot>
+<tr class="even">
+<td colspan="7" style="text-align: left;">Mean value of wellbeing outcomes for mothers and fathers in the<br>
+matched household sample N=1,506 days, 753 mothers and fathers, 377<br>
+households. Data: UK TUS 2015 Outcomes range from 1 to 7, except for life satisfaction for which scores were standardized.</td>
+</tr>
+</tfoot>
+
+</table>
+</div>
+</div>
+<p>Finally, Table 4 shows an overview of the outcome variables for mothers and fathers: daily levels of enjoyment, life satisfaction, as well as satisfaction with partner and work-life balance satisfaction. Means tend to be similar albeit slightly higher for mothers. The number of observations is clearly higher for mothers than fathers with the exception of daily enjoyment.</p>
+<section id="multivariate-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="multivariate-analysis">Multivariate Analysis</h2>
+<p>GEE models were fitted to the data, in order to examine the association between the share of childcare taken on by fathers and parental well-being. As expected, significant positive associations were found with daily enjoyment rather than the cognitive instruments, but only for fathers. No significant association were found between fathers’ share of childcare and life satisfaction. Weaker associations (p&lt;.1) with work-life balance satisfaction and satisfaction with social life were found, respectively positive and negative. The absolute amount of time mothers spent looking after their children (rather than their share) was found more strongly associated with maternal well-being outcomes rather than father’s share per se.</p>
+<section id="mothers" class="level3">
+<h3 class="anchored" data-anchor-id="mothers">Mothers</h3>
+<p>Table 5 shows no significant association between the well-being of mothers and the share of childcare done by fathers, once socio-demographic variables, as well as the absolute amount of time they spend on childcare are controlled for. Rather unexpectedly, the daily enjoyment of mothers increased with the time they spent on solo and enrichment childcare, in the latter case a strongly significant relationship (respectively .09 p&lt;.05 and .12 p&lt;001). A similar result was observed with life satisfaction and the time mothers spent on routine childcare. In other words, the actual time mothers dedicate to childcare seems to have a more significant impact on their well-being than the share that is done by fathers.</p>
+<p>Before control variables were introduced a weakly significant positive effect on maternal daily enjoyment was observed in households where fathers took on between 1 and 40% of primary childcare (not shown). These results might suggest that the positive association between fathers’ share of childcare and their partner’s well-being could hold only for some duration of childcare. We explored this interpretation by introducing an interaction term between the two variables. Results are shown in Table 6.</p>
+<p>The picture emerging is that there is a strongly significant association between both the daily enjoyment of mothers and their life satisfaction on the one hand, and the time they spend looking after their children – but only in households when fathers take on more than 40% of either the primary or solo childcare workload. The coefficients are respectively .32 and .49 p&lt;.001 for daily enjoyment, and .31 and .48 p&lt;.01 for life satisfaction. A similarly strong association with life satisfaction was found in the case of routine childcare (.60 P&lt;.001) and with daily enjoyment and enrichment care (.14 p&lt;.001). This suggests that the share of childcare taken on by fathers has a clear bearing on the way the well-being of mothers is affected by looking after their children.</p>
+<div class="cell-output-display">
+
+<div id="xobbgndynm" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xobbgndynm table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xobbgndynm thead, #xobbgndynm tbody, #xobbgndynm tfoot, #xobbgndynm tr, #xobbgndynm td, #xobbgndynm th {
+  border-style: none;
+}
+
+#xobbgndynm p {
+  margin: 0;
+  padding: 0;
+}
+
+#xobbgndynm .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xobbgndynm .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xobbgndynm .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xobbgndynm .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xobbgndynm .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xobbgndynm .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xobbgndynm .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xobbgndynm .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xobbgndynm .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xobbgndynm .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xobbgndynm .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xobbgndynm .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xobbgndynm .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xobbgndynm .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xobbgndynm .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xobbgndynm .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xobbgndynm .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xobbgndynm .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xobbgndynm .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xobbgndynm .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xobbgndynm .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xobbgndynm .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xobbgndynm .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xobbgndynm .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xobbgndynm .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xobbgndynm .gt_left {
+  text-align: left;
+}
+
+#xobbgndynm .gt_center {
+  text-align: center;
+}
+
+#xobbgndynm .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xobbgndynm .gt_font_normal {
+  font-weight: normal;
+}
+
+#xobbgndynm .gt_font_bold {
+  font-weight: bold;
+}
+
+#xobbgndynm .gt_font_italic {
+  font-style: italic;
+}
+
+#xobbgndynm .gt_super {
+  font-size: 65%;
+}
+
+#xobbgndynm .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xobbgndynm .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xobbgndynm .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xobbgndynm .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xobbgndynm .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xobbgndynm .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xobbgndynm .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=" <span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"> <span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Primary<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Primary<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Alone<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Alone<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Routine<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Routine<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Enriched<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Enriched<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Work-life balance satisfaction">Work-life balance satisfaction</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Work-life balance satisfaction" class="gt_row gt_left">Intercept</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">4.48***</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">4.54***</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">4.62***</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">4.49***</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.55)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.55)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.57)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.57)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">0.10</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">-0.02</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">0.19</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.11</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.18)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.18)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.17)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.20)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">0.15</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">-0.06</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">-0.04</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.29</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.19)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.19)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.19)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.19)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">0.16*</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">0.08</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">0.08</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.06</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.08)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.08)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.08)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.08)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">769</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">677</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">761</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">651</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">R2</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">0.026</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">0.018</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">0.025</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.023</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">0.013</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">0.003</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">0.012</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.008</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">AIC</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">2991.9</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">2620.2</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">2998.0</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">2495.1</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Life satisfaction">Life satisfaction</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Life satisfaction" class="gt_row gt_left">Intercept</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.57</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">0.72</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.53</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.37</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.48)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.46)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.45)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.49)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">-0.04</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">0.13</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.08</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">-0.13</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.16)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.15)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.16)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.15)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">-0.13</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">-0.24</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">-0.11</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.09</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.16)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.17)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.16)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.15)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.09</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">-0.01</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.03</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.06</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.08)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.07)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.07)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.07)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">410</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">355</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">407</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">342</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">R2</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.061</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">0.074</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.053</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.062</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.037</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">0.047</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.029</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.034</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">AIC</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">1248.4</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">1095.6</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">1219.7</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">1036.7</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Satisfaction with social life">Satisfaction with social life</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Satisfaction with social life" class="gt_row gt_left">Intercept</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">5.11***</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">4.78***</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">4.89***</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">4.92***</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.54)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.54)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.52)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.57)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">-0.12</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">0.01</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">-0.15</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">-0.19</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.18)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.18)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.17)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.21)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">-0.04</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">-0.01</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.06</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">0.07</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.18)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.19)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.17)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.18)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">-0.12</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">-0.05</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">-0.03</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">-0.05</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.09)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.08)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.09)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.10)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">776</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">685</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">769</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">656</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">R2</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">0.024</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">0.024</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.020</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">0.040</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">0.012</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">0.009</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.007</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">0.025</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">AIC</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">2973.0</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">2661.8</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">2957.2</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">2592.5</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Enjoyment">Enjoyment</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Enjoyment" class="gt_row gt_left">Intercept</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">5.96***</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">6.00***</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">6.00***</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">6.17***</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.35)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.34)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.37)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.31)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">-0.12</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">-0.07</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">-0.16</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.03</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.11)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.12)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.11)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.11)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">-0.11</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">-0.14</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">-0.18</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.02</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.11)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.12)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.12)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.11)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.10+</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">0.10+</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.06</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.11**</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.05)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.05)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.06)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.04)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">372</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">334</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">369</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">330</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">R2</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.071</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">0.076</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.061</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.073</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.045</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">0.047</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.035</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.044</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">AIC</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">903.4</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">784.1</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">870.8</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">746.6</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td>
+    </tr>
+  </tfoot>
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> Matched household-level dataset of parents aged 16 and above in heterosexual couples with at least one child under 15. data: UK TUS 2015 Coefficients denote the change in the specified well-being scale.</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+<p>As table 5 shows, the work-life balance satisfaction of mothers, and to a lesser extent, their satisfaction with social life were found associated with the share of childcare taken on by fathers, but these relationships were only significant at p&lt;.1. In households where fathers took on a moderate amount of enriched childcare (up to 40%), mothers expressed worse level of satisfaction with their social life (-.26) whereas in households where fathers took on a substantial amount of enriched childcare (more than 40%), mothers report being happier with their work life balance (.39).</p>
+</section>
+<section id="fathers" class="level3">
+<h3 class="anchored" data-anchor-id="fathers">Fathers</h3>
+<p>Unlike mothers, we found a direct association between the daily enjoyment of fathers and the share of childcare they take on. As Table 5 shows, father’s daily enjoyment was higher in households where they spent more than 40% of the time doing childcare as a primary activity (.41), and this relationship is strongly significant (p&lt;.001). Similarly, it was also higher in households where they did take on more than 40% of the time on enrichment childcare (.30, p&lt;.05), which confirms our expectations.</p>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="taeapirrsq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#taeapirrsq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#taeapirrsq thead, #taeapirrsq tbody, #taeapirrsq tfoot, #taeapirrsq tr, #taeapirrsq td, #taeapirrsq th {
+  border-style: none;
+}
+
+#taeapirrsq p {
+  margin: 0;
+  padding: 0;
+}
+
+#taeapirrsq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#taeapirrsq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#taeapirrsq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#taeapirrsq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#taeapirrsq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#taeapirrsq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#taeapirrsq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#taeapirrsq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#taeapirrsq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#taeapirrsq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#taeapirrsq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#taeapirrsq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#taeapirrsq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#taeapirrsq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#taeapirrsq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#taeapirrsq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#taeapirrsq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#taeapirrsq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#taeapirrsq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#taeapirrsq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#taeapirrsq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#taeapirrsq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#taeapirrsq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#taeapirrsq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#taeapirrsq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#taeapirrsq .gt_left {
+  text-align: left;
+}
+
+#taeapirrsq .gt_center {
+  text-align: center;
+}
+
+#taeapirrsq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#taeapirrsq .gt_font_normal {
+  font-weight: normal;
+}
+
+#taeapirrsq .gt_font_bold {
+  font-weight: bold;
+}
+
+#taeapirrsq .gt_font_italic {
+  font-style: italic;
+}
+
+#taeapirrsq .gt_super {
+  font-size: 65%;
+}
+
+#taeapirrsq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#taeapirrsq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#taeapirrsq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#taeapirrsq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#taeapirrsq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#taeapirrsq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#taeapirrsq .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption><p>Table 6: GEE models of fathers well-being by fathers share of
+childcare</p></caption>
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=" <span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"> <span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Primary<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Primary<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Alone<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Alone<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Routine<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Routine<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Enriched<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Enriched<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Work-life balance satisfaction">Work-life balance satisfaction</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Work-life balance satisfaction" class="gt_row gt_left">Intercept</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">4.68***</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">4.71***</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">4.66***</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">4.95***</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.65)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.59)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.64)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.61)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">0.18</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">0.24</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">0.11</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.00</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.21)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.20)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.22)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.24)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">-0.05</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">-0.08</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">-0.03</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">-0.21</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.24)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.22)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.22)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.21)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">-0.08</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">-0.03</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">-0.11</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.00</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left"></td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">(0.09)</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">(0.09)</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">(0.09)</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">(0.09)</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">546</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">487</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">547</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">449</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">R2</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">0.011</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">0.012</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">0.010</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">0.016</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">-0.008</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">-0.009</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">-0.008</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">-0.007</td></tr>
+    <tr><td headers="Work-life balance satisfaction" class="gt_row gt_left">AIC</td>
+<td headers="Work-life balance satisfaction  Primary" class="gt_row gt_center">2127.2</td>
+<td headers="Work-life balance satisfaction  Alone" class="gt_row gt_center">1869.0</td>
+<td headers="Work-life balance satisfaction  Routine" class="gt_row gt_center">2091.3</td>
+<td headers="Work-life balance satisfaction  Enriched" class="gt_row gt_center">1765.4</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Life satisfaction">Life satisfaction</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Life satisfaction" class="gt_row gt_left">Intercept</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">-0.52</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">-0.08</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">-0.42</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">-0.10</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.51)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.49)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.49)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.47)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.16</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">-0.03</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.07</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">-0.15</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.18)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.19)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.18)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.18)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">-0.11</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">-0.28</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">-0.07</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">-0.04</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.20)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.18)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.22)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.16)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.10</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">0.10</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.11</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.10</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left"></td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">(0.08)</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">(0.08)</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">(0.08)</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">(0.07)</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">290</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">256</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">292</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">242</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">R2</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.050</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">0.051</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.039</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.051</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">0.016</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">0.012</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">0.004</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">0.010</td></tr>
+    <tr><td headers="Life satisfaction" class="gt_row gt_left">AIC</td>
+<td headers="Life satisfaction  Primary" class="gt_row gt_center">946.5</td>
+<td headers="Life satisfaction  Alone" class="gt_row gt_center">867.0</td>
+<td headers="Life satisfaction  Routine" class="gt_row gt_center">921.6</td>
+<td headers="Life satisfaction  Enriched" class="gt_row gt_center">801.5</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Satisfaction with social life">Satisfaction with social life</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Satisfaction with social life" class="gt_row gt_left">Intercept</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">4.68***</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">4.75***</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">4.60***</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">4.84***</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.61)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.58)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.58)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.57)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">0.22</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">-0.11</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.04</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">-0.17</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.22)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.20)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.22)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.23)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">0.00</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">-0.07</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.22</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">-0.34</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.23)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.22)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.21)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.21)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">-0.08</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">0.07</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.01</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">0.02</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left"></td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">(0.10)</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">(0.09)</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">(0.10)</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">(0.10)</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">548</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">488</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">548</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">451</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">R2</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">0.022</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">0.023</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.018</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">0.030</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">0.003</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">0.002</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">0.000</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">0.008</td></tr>
+    <tr><td headers="Satisfaction with social life" class="gt_row gt_left">AIC</td>
+<td headers="Satisfaction with social life  Primary" class="gt_row gt_center">2138.4</td>
+<td headers="Satisfaction with social life  Alone" class="gt_row gt_center">1900.0</td>
+<td headers="Satisfaction with social life  Routine" class="gt_row gt_center">2134.1</td>
+<td headers="Satisfaction with social life  Enriched" class="gt_row gt_center">1747.1</td></tr>
+    <tr class="gt_group_heading_row">
+      <th colspan="5" class="gt_group_heading" scope="colgroup" id="Enjoyment">Enjoyment</th>
+    </tr>
+    <tr class="gt_row_group_first"><td headers="Enjoyment" class="gt_row gt_left">Intercept</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">5.82***</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">6.18***</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">5.91***</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">6.18***</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.31)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.31)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.30)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.32)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Paternal share &lt;40% (ref. 0%)</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.22+</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">-0.14</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.16</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.01</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.13)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.15)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.12)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.14)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Paternal share &gt;=40%</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.25*</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">0.06</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.17</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.14</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.11)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.11)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.11)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.11)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Time spent on childcare</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.03</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">0.00</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.01</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.01</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left"></td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">(0.04)</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">(0.04)</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">(0.04)</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">(0.05)</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">385</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">344</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">382</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">329</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">R2</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.156</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">0.142</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.146</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.155</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">0.133</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">0.116</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">0.123</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">0.128</td></tr>
+    <tr><td headers="Enjoyment" class="gt_row gt_left">AIC</td>
+<td headers="Enjoyment  Primary" class="gt_row gt_center">1007.0</td>
+<td headers="Enjoyment  Alone" class="gt_row gt_center">910.1</td>
+<td headers="Enjoyment  Routine" class="gt_row gt_center">981.6</td>
+<td headers="Enjoyment  Enriched" class="gt_row gt_center">779.5</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td>
+    </tr>
+  </tfoot>
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> Matched household-level dataset of parents aged 16 and above in heterosexual couples with at least one child under 15. data: UK TUS 2015 Coefficients denote the change in the specified well-being scale.</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="xiwmdmiutd" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xiwmdmiutd table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xiwmdmiutd thead, #xiwmdmiutd tbody, #xiwmdmiutd tfoot, #xiwmdmiutd tr, #xiwmdmiutd td, #xiwmdmiutd th {
+  border-style: none;
+}
+
+#xiwmdmiutd p {
+  margin: 0;
+  padding: 0;
+}
+
+#xiwmdmiutd .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xiwmdmiutd .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xiwmdmiutd .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xiwmdmiutd .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xiwmdmiutd .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xiwmdmiutd .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xiwmdmiutd .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xiwmdmiutd .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xiwmdmiutd .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xiwmdmiutd .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xiwmdmiutd .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xiwmdmiutd .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xiwmdmiutd .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xiwmdmiutd .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xiwmdmiutd .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xiwmdmiutd .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xiwmdmiutd .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xiwmdmiutd .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xiwmdmiutd .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xiwmdmiutd .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xiwmdmiutd .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xiwmdmiutd .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xiwmdmiutd .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xiwmdmiutd .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xiwmdmiutd .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xiwmdmiutd .gt_left {
+  text-align: left;
+}
+
+#xiwmdmiutd .gt_center {
+  text-align: center;
+}
+
+#xiwmdmiutd .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xiwmdmiutd .gt_font_normal {
+  font-weight: normal;
+}
+
+#xiwmdmiutd .gt_font_bold {
+  font-weight: bold;
+}
+
+#xiwmdmiutd .gt_font_italic {
+  font-style: italic;
+}
+
+#xiwmdmiutd .gt_super {
+  font-size: 65%;
+}
+
+#xiwmdmiutd .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xiwmdmiutd .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xiwmdmiutd .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xiwmdmiutd .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xiwmdmiutd .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xiwmdmiutd .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xiwmdmiutd .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption><p>Table 7 Interactions between duration and sharing of childcare, daily
+enjoyment of mothers</p></caption>
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=" <span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"> <span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Primary<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Primary<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Alone<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Alone<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Routine<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Routine<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Enriched<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Enriched<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="" class="gt_row gt_left">Father's share &lt;40%</td>
+<td headers="Primary" class="gt_row gt_center">5.94***</td>
+<td headers="Alone" class="gt_row gt_center">6.03***</td>
+<td headers="Routine" class="gt_row gt_center">5.91***</td>
+<td headers="Enriched" class="gt_row gt_center">6.17***</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.36)</td>
+<td headers="Alone" class="gt_row gt_center">(0.35)</td>
+<td headers="Routine" class="gt_row gt_center">(0.36)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.31)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father's share &gt;=40%</td>
+<td headers="Primary" class="gt_row gt_center">-0.04</td>
+<td headers="Alone" class="gt_row gt_center">-0.13</td>
+<td headers="Routine" class="gt_row gt_center">-0.10</td>
+<td headers="Enriched" class="gt_row gt_center">0.02</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.12)</td>
+<td headers="Alone" class="gt_row gt_center">(0.14)</td>
+<td headers="Routine" class="gt_row gt_center">(0.11)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.14)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father Not caring X mothers'caring time</td>
+<td headers="Primary" class="gt_row gt_center">0.20**</td>
+<td headers="Alone" class="gt_row gt_center">0.07</td>
+<td headers="Routine" class="gt_row gt_center">0.18**</td>
+<td headers="Enriched" class="gt_row gt_center">0.11</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.06)</td>
+<td headers="Alone" class="gt_row gt_center">(0.06)</td>
+<td headers="Routine" class="gt_row gt_center">(0.06)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.07)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father's share &lt;40% X mothers'caring time</td>
+<td headers="Primary" class="gt_row gt_center">0.02</td>
+<td headers="Alone" class="gt_row gt_center">0.15</td>
+<td headers="Routine" class="gt_row gt_center">-0.03</td>
+<td headers="Enriched" class="gt_row gt_center">0.12*</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.07)</td>
+<td headers="Alone" class="gt_row gt_center">(0.10)</td>
+<td headers="Routine" class="gt_row gt_center">(0.08)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.06)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father's share &gt;=40% X mothers'caring time</td>
+<td headers="Primary" class="gt_row gt_center">0.07</td>
+<td headers="Alone" class="gt_row gt_center">0.24</td>
+<td headers="Routine" class="gt_row gt_center">0.10</td>
+<td headers="Enriched" class="gt_row gt_center">0.08</td></tr>
+    <tr><td headers="" class="gt_row gt_left" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;"></td>
+<td headers="Primary" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.10)</td>
+<td headers="Alone" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.19)</td>
+<td headers="Routine" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.13)</td>
+<td headers="Enriched" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.10)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Primary" class="gt_row gt_center">372</td>
+<td headers="Alone" class="gt_row gt_center">334</td>
+<td headers="Routine" class="gt_row gt_center">369</td>
+<td headers="Enriched" class="gt_row gt_center">330</td></tr>
+    <tr><td headers="" class="gt_row gt_left">R2</td>
+<td headers="Primary" class="gt_row gt_center">0.084</td>
+<td headers="Alone" class="gt_row gt_center">0.080</td>
+<td headers="Routine" class="gt_row gt_center">0.081</td>
+<td headers="Enriched" class="gt_row gt_center">0.073</td></tr>
+    <tr><td headers="" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Primary" class="gt_row gt_center">0.053</td>
+<td headers="Alone" class="gt_row gt_center">0.046</td>
+<td headers="Routine" class="gt_row gt_center">0.051</td>
+<td headers="Enriched" class="gt_row gt_center">0.038</td></tr>
+    <tr><td headers="" class="gt_row gt_left">AIC</td>
+<td headers="Primary" class="gt_row gt_center">915.5</td>
+<td headers="Alone" class="gt_row gt_center">859.2</td>
+<td headers="Routine" class="gt_row gt_center">890.2</td>
+<td headers="Enriched" class="gt_row gt_center">809.0</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td>
+    </tr>
+  </tfoot>
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> Matched household-level dataset of parents aged 16 and above in heterosexual couples with at least one child under 15. data: UK TUS 2015. Coefficients denote the change in the specified well-being scale. Standard errors between brackets.</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+
+<div id="yidfwbohqv" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#yidfwbohqv table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#yidfwbohqv thead, #yidfwbohqv tbody, #yidfwbohqv tfoot, #yidfwbohqv tr, #yidfwbohqv td, #yidfwbohqv th {
+  border-style: none;
+}
+
+#yidfwbohqv p {
+  margin: 0;
+  padding: 0;
+}
+
+#yidfwbohqv .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#yidfwbohqv .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#yidfwbohqv .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#yidfwbohqv .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#yidfwbohqv .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#yidfwbohqv .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#yidfwbohqv .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#yidfwbohqv .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#yidfwbohqv .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#yidfwbohqv .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#yidfwbohqv .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#yidfwbohqv .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#yidfwbohqv .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#yidfwbohqv .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#yidfwbohqv .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yidfwbohqv .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#yidfwbohqv .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#yidfwbohqv .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#yidfwbohqv .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yidfwbohqv .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#yidfwbohqv .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yidfwbohqv .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#yidfwbohqv .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yidfwbohqv .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#yidfwbohqv .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#yidfwbohqv .gt_left {
+  text-align: left;
+}
+
+#yidfwbohqv .gt_center {
+  text-align: center;
+}
+
+#yidfwbohqv .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#yidfwbohqv .gt_font_normal {
+  font-weight: normal;
+}
+
+#yidfwbohqv .gt_font_bold {
+  font-weight: bold;
+}
+
+#yidfwbohqv .gt_font_italic {
+  font-style: italic;
+}
+
+#yidfwbohqv .gt_super {
+  font-size: 65%;
+}
+
+#yidfwbohqv .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#yidfwbohqv .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#yidfwbohqv .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#yidfwbohqv .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#yidfwbohqv .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#yidfwbohqv .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#yidfwbohqv .gt_indent_5 {
+  text-indent: 25px;
+}
+</style>
+<table class="gt_table" data-quarto-disable-processing="false" data-quarto-bootstrap="false"><caption><p>Table 8 Interactions between duration and sharing of childcare (Life
+satisfaction of fathers</p></caption>
+  <thead>
+    
+    <tr class="gt_col_headings">
+      <th class="gt_col_heading gt_columns_bottom_border gt_left" rowspan="1" colspan="1" scope="col" id=" <span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>"> <span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Primary<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Primary<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Alone<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Alone<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Routine<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Routine<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+      <th class="gt_col_heading gt_columns_bottom_border gt_center" rowspan="1" colspan="1" scope="col" id="Enriched<span class=&quot;gt_footnote_marks&quot; style=&quot;white-space:nowrap;font-style:italic;font-weight:normal;&quot;><sup>1</sup></span>">Enriched<span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span></th>
+    </tr>
+  </thead>
+  <tbody class="gt_table_body">
+    <tr><td headers="" class="gt_row gt_left">Father's share &lt;40%</td>
+<td headers="Primary" class="gt_row gt_center">-0.55</td>
+<td headers="Alone" class="gt_row gt_center">-0.09</td>
+<td headers="Routine" class="gt_row gt_center">-0.55</td>
+<td headers="Enriched" class="gt_row gt_center">0.00</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.50)</td>
+<td headers="Alone" class="gt_row gt_center">(0.49)</td>
+<td headers="Routine" class="gt_row gt_center">(0.48)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.47)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father's share &gt;=40%</td>
+<td headers="Primary" class="gt_row gt_center">0.25</td>
+<td headers="Alone" class="gt_row gt_center">0.00</td>
+<td headers="Routine" class="gt_row gt_center">0.16</td>
+<td headers="Enriched" class="gt_row gt_center">-0.13</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.18)</td>
+<td headers="Alone" class="gt_row gt_center">(0.25)</td>
+<td headers="Routine" class="gt_row gt_center">(0.18)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.21)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father Not caring X mothers'caring time</td>
+<td headers="Primary" class="gt_row gt_center">0.25+</td>
+<td headers="Alone" class="gt_row gt_center">0.10</td>
+<td headers="Routine" class="gt_row gt_center">0.30*</td>
+<td headers="Enriched" class="gt_row gt_center">0.29*</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.15)</td>
+<td headers="Alone" class="gt_row gt_center">(0.09)</td>
+<td headers="Routine" class="gt_row gt_center">(0.15)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.12)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father's share &lt;40% X mothers'caring time</td>
+<td headers="Primary" class="gt_row gt_center">-0.05</td>
+<td headers="Alone" class="gt_row gt_center">0.06</td>
+<td headers="Routine" class="gt_row gt_center">-0.03</td>
+<td headers="Enriched" class="gt_row gt_center">0.09</td></tr>
+    <tr><td headers="" class="gt_row gt_left"></td>
+<td headers="Primary" class="gt_row gt_center">(0.08)</td>
+<td headers="Alone" class="gt_row gt_center">(0.16)</td>
+<td headers="Routine" class="gt_row gt_center">(0.08)</td>
+<td headers="Enriched" class="gt_row gt_center">(0.09)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Father's share &gt;=40% X mothers'caring time</td>
+<td headers="Primary" class="gt_row gt_center">0.33*</td>
+<td headers="Alone" class="gt_row gt_center">0.44</td>
+<td headers="Routine" class="gt_row gt_center">0.45+</td>
+<td headers="Enriched" class="gt_row gt_center">-0.08</td></tr>
+    <tr><td headers="" class="gt_row gt_left" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;"></td>
+<td headers="Primary" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.17)</td>
+<td headers="Alone" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.30)</td>
+<td headers="Routine" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.25)</td>
+<td headers="Enriched" class="gt_row gt_center" style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: #000000;">(0.12)</td></tr>
+    <tr><td headers="" class="gt_row gt_left">Num.Obs.</td>
+<td headers="Primary" class="gt_row gt_center">290</td>
+<td headers="Alone" class="gt_row gt_center">256</td>
+<td headers="Routine" class="gt_row gt_center">292</td>
+<td headers="Enriched" class="gt_row gt_center">242</td></tr>
+    <tr><td headers="" class="gt_row gt_left">R2</td>
+<td headers="Primary" class="gt_row gt_center">0.075</td>
+<td headers="Alone" class="gt_row gt_center">0.055</td>
+<td headers="Routine" class="gt_row gt_center">0.065</td>
+<td headers="Enriched" class="gt_row gt_center">0.064</td></tr>
+    <tr><td headers="" class="gt_row gt_left">R2 Adj.</td>
+<td headers="Primary" class="gt_row gt_center">0.035</td>
+<td headers="Alone" class="gt_row gt_center">0.008</td>
+<td headers="Routine" class="gt_row gt_center">0.025</td>
+<td headers="Enriched" class="gt_row gt_center">0.015</td></tr>
+    <tr><td headers="" class="gt_row gt_left">AIC</td>
+<td headers="Primary" class="gt_row gt_center">957.2</td>
+<td headers="Alone" class="gt_row gt_center">873.2</td>
+<td headers="Routine" class="gt_row gt_center">939.9</td>
+<td headers="Enriched" class="gt_row gt_center">806.6</td></tr>
+  </tbody>
+  <tfoot class="gt_sourcenotes">
+    <tr>
+      <td class="gt_sourcenote" colspan="5">+ p &lt; 0.1, * p &lt; 0.05, ** p &lt; 0.01, *** p &lt; 0.001</td>
+    </tr>
+  </tfoot>
+  <tfoot class="gt_footnotes">
+    <tr>
+      <td class="gt_footnote" colspan="5"><span class="gt_footnote_marks" style="white-space:nowrap;font-style:italic;font-weight:normal;"><sup>1</sup></span> Matched household-level dataset of parents aged 16 and above in heterosexual couples with at least one child under 15. data: UK TUS 2015. Coefficients denote the change in the specified well-being scale. Standard errors between brackets.</td>
+    </tr>
+  </tfoot>
+</table>
+</div>
+</div>
+</div>
+<p>We also explored the interaction between the amount of time spent on childcare by mothers and the share taken on by fathers on paternal well-being. We found marginal evidence of a positive interaction between sharing of primary childcare and the amount of time mothers care for children. In other words, as mothers’ time on childcare increases, fathers experience higher levels of daily enjoyment, but only if they provide a moderate (up to 40%) contribution to primary childcare (.10, p&lt;.1). Stronger interactions, in line with those observed among mothers were found with the life satisfaction of fathers. As the time mothers spent on childcare increased, a contribution of fathers greater than 40% to either primary or solo childcare significantly increased their life satisfaction (respectively .40 p&lt;.01 and .33 p&lt;05). As expected, no significant association was found between the well-being of fathers and their involvement in routine childcare.</p>
+<!-- ```{r tab7} -->
+
+<!-- #| tab-cap: "Table 6 GEE models of SWB & ` – interactions between duration and sharing" -->
+<!-- modelsummary((fit.mi[["Enjoyment"]]), -->
+<!--              stars = T, -->
+<!--              fmt=2, -->
+<!--              coef_omit=c(-11,-12,-13), -->
+<!--              notes="Matched household-level dataset of parents aged 16 and above in heterosexual couples with at least one child under 15. data: UK TUS 2015. Coefficients denote the change in the specified well-being scale. Standard errors between brackets.") -->
+<!-- ``` -->
+</section>
+<section id="role-of-control-variables" class="level3">
+<h3 class="anchored" data-anchor-id="role-of-control-variables">Role of control variables</h3>
+<p>Comparing the above models with and without covariates gave some indication of the pattern of association between socio-demographic factors, childcare sharing and well-being. Controlling for whether caring occurred during a weekday or at the weekend reduces the coefficient and significance of enrichment care on well-being: in other words, the positive impact of fathers spending time on enriched care might in fact be partly due to the fact that it predominantly occurs at the weekend, a time during which daily enjoyment tends to be higher for all.</p>
+<p>As we already saw, controlling for the absolute amount of time spent by mothers on childcare made initially significant associations between fathers’ share and the daily enjoyment of mothers, become non-significant in some cases. This in turn enabled us to unearth significant interactions between the two variables. These suggest that a large share of childcare taken on by fathers has a positive impact on maternal daily enjoyment as mothers’ time spent looking after children increases. On the other hand when mothers spent increased amounts of time on childcare, it is only when fathers took on a modest share of it that their daily enjoyment improved.</p>
+</section>
+</section>
+</section>
+<section id="discussion-and-conclusion" class="level1">
+<h1>Discussion And Conclusion</h1>
+<p>This paper examined how the division of childcare between mothers and fathers in dual earner couples with children was associated with parental well-being levels using time use diaries. By contrast with previous studies, we were able to look at the actual time mothers and fathers spent looking after their children and the way this was shared between them, specifically exploring the share of total childcare time taken on by fathers. We investigated the differences in well-being according to the type of childcare that was shared – i.e., routine vs.&nbsp;enrichment, primary, solo childcare. We were able to rely on an innovative instrument measuring immediate well-being – the overall level of enjoyment parents felt during the day – in addition to more established indicators of cognitive well-being such as life satisfaction or satisfaction with social life, and work-life balance satisfaction.</p>
+<p>One important result presented in this paper is that despite the reported increase over the years in the time spent caring by fathers, a large proportion of men in the sample did not report any type of childcare during their day – approximately a quarter of the days in the sample. Furthermore, almost half did not record taking part in any enrichment care or any solo care, where care was provided by the fathers alone without the mother involved. Very few fathers took an equal share or more (40% and above) of caring. We found evidence that the involvement of fathers in childcare may help improve a mother’s well-being especially for daily enjoyment and life satisfaction. When fathers carry out a significant share of the primary and routine childcare, mother’s time spent looking after children is positively associated with their own well-being.</p>
+<p>We found a more consistent association between a father’s involvement in childcare and their own well-being. There was a clear indication that a more equal sharing of childcare – when fathers were responsible for 40% or more of the total time spent on primary childcare in the household – made a difference in raising their level of well-being, by contrast with fathers who were not involved. Similarly to previous studies, we found that fathers who were intensively involved in enrichment childcare were those who were enjoyed their day more, and were more satisfied with their work-life balance.</p>
+<p>This leads us to an interesting conclusion. Much of the discussion around the sharing of childcare so far has been driven by its impact on gender equality, namely how a more equal distribution of caring roles can help women fully compete with men in the commodified labour market. However, as this study and some previous studies have shown (<span class="citation" data-cites="Ladge2015">Ladge et al. (<a href="#ref-Ladge2015" role="doc-biblioref">2015</a>)</span>; <span class="citation" data-cites="Negraia2020">Negraia and Augustine (<a href="#ref-Negraia2020" role="doc-biblioref">2020</a>)</span>), getting fathers more involved in childcare may also improve men’s (mental) health. Masculinities and men’s identities are shifting as society’s ideas of gender roles change and demands of men and fathers change (<span class="citation" data-cites="Brandth1998">Brandth and Kvande (<a href="#ref-Brandth1998" role="doc-biblioref">1998</a>)</span>). What our study has shown is that we need to think about men’s involvement in childcare as being instrumental to improve their well-being. Men should be allowed to expand their roles as carers not only to ensure that they are able to meet their duties as involved fathers, and equal partners in parenting, but also because it benefits their mental health, and as a result, possibly their overall health and well-being in the long term as well.</p>
+<p>These results also add to our knowledge of the association between the sharing of childcare and maternal well-being. Previous studies have predominantly relied on instruments recording cognitive well-being, which remains at arms’ length from respondents daily emotional experiences. Our study shows that father’s involvement in childcare has a positive impact on the immediate well-being of both parents, as measured by their daily enjoyment levels. Although limited, these results seem to suggest that beyond the traditional reasoned assessments mothers and fathers make of their satisfaction with their life, the daily flow of emotions which is also an important component of subjective well-being is affected by the share of childcare that is being taken on by fathers, and in fact perhaps more so. Judging by the results we presented above, daily levels or enjoyment were found to be as consistently associated with the sharing of childcare as traditional cognitive instruments.</p>
+<p>The paper is not without its limitations. To start with, the small sample size hampers the precision of the results presented here. Future studies should be conducted, preferably with larger sample, to examine the extent to which these results can be replicated. Another issue is the fact that the instrument we used for measuring daily enjoyment remains rudimentary. Although it obviously represents a clear improvement over the previous lack of measurement of immediate well-being in large scale social surveys, it does not currently capture negative emotions, or the extent to which positive or negative emotions leads to stimulation or excitement (<span class="citation" data-cites="Warr2007">Warr (<a href="#ref-Warr2007" role="doc-biblioref">2007</a>)</span>).</p>
+<p>These findings have significant implications for government and corporate policies. Many governments have been pushing for greater involvement by fathers in the care of their children, for instance, by increasing the size of the fathers-only portion of parental leave (see also the new European Commission’s Work-life balance directive). Much of these tend to aim to increase the size of the female workforce and fully exploit the female human capital potential. This paper shows that the conversation also needs to focus on enhancing parental well-beingof fathers and men’s in addition to that of mothers. This can reinforce the case for implementing such policies: which are not only necessary for sustaining economic growth or for women’s rights per se, but also to enhance the well-being of both men and women.</p>
+<p>Our results also have implications for companies and managers. We know from the organizational studies literature that workers who are happy and have better work-life balance will be more productive in companies (<span class="citation" data-cites="Leslie2012">Leslie et al. (<a href="#ref-Leslie2012" role="doc-biblioref">2012</a>)</span>). Whilst retaining female workers is considered to be the main raison d’être of fathers’ involvement in childcare, this may not provide sufficient incentives for employers of fathers. Increased maternal labour force participation may benefit other companies. However, as we can see from the results of our study, supporting fathers to play a larger role in the care of children can improve their well-being which can directly relate to worker’s productivity.</p>
+<p>Finally, our study carries an important message to fathers and mothers. Fathers may be reluctant to use leaves and flexible working arrangements to be more involved in the care of their children due to the stigma it carries (<span class="citation" data-cites="Rudman2013">Rudman and Mescher (<a href="#ref-Rudman2013" role="doc-biblioref">2013</a>)</span>), and for fear of experiencing disadvantage in their career. However, the message that “taking on a larger part in the care of children may be beneficial for your well-being”, especially compared to that of households with more traditional division of labour may contribute to changing this idea. Our study confirms that sharing the two roles equally may contribute to healthier relationships and more enjoyable days.</p>
+</section>
+<section id="references" class="level1 unnumbered">
+
+
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Allen2007a" class="csl-entry" role="listitem">
+Allen, and K Daly. 2007. <span>“The Effects of Father Involvement: An Updated Research Summary of the Evidence: Centre for Families.”</span>
+</div>
+<div id="ref-Baxter2011" class="csl-entry" role="listitem">
+Baxter, Jennifer, and Diana Smart. 2011. <span>“Fathering in Australia Among Couple Families with Young Children.”</span> Research report. Australian Department of Families, Housing, Community Services; Indigenous Affairs Occasional paper no 37. <a href="https://ssrn.com/abstract=1776522">https://ssrn.com/abstract=1776522</a>.
+</div>
+<div id="ref-Brandth1998" class="csl-entry" role="listitem">
+Brandth, Berit, and Elin Kvande. 1998. <span>“Masculinity and Child Care: The Reconstruction of Fathering.”</span> <em>The Sociological Review (Keele)</em> 46 (2): 293–313.
+</div>
+<div id="ref-Burgess2021" class="csl-entry" role="listitem">
+Burgess, Adrienne, and Rebecca Goldman. 2021. <span>“Lockdown Fathers: The Untold Story: Full Report.”</span> Research report. Fatherhood Institute. <a href="https://www.scie-socialcareonline.org.uk/lockdown-fathers-the-untold-story-full-report/r/a116f00000UuYZVAA3">https://www.scie-socialcareonline.org.uk/lockdown-fathers-the-untold-story-full-report/r/a116f00000UuYZVAA3</a>.
+</div>
+<div id="ref-Carlson2016" class="csl-entry" role="listitem">
+Carlson, Daniel L., Sarah Hanson, and Andrea Fitzroy. 2016. <span>“The Division of Child Care, Sexual Intimacy, and Relationship Quality in Couples.”</span> <em>Gender &amp; Society</em> 30 (3): 442–66.
+</div>
+<div id="ref-Chandola2019" class="csl-entry" role="listitem">
+Chandola, Tarani, Cara L Booker, Meena Kumari, and Michaela Benzeval. 2019. <span>“Are Flexible Work Arrangements Associated with Lower Levels of Chronic Stress-Related Biomarkers? A Study of 6025 Employees in the UK Household Longitudinal Study.”</span> <em>Sociology (Oxford)</em> 53 (4): 779–99.
+</div>
+<div id="ref-Chung2021" class="csl-entry" role="listitem">
+Chung, H. 2021. <span>“Shared Care, Father’s Involvement in Care and Family Well-Being Outcomes: A Literature Review.”</span> <em>Report for the Government Equalities Office</em>.
+</div>
+<div id="ref-Chung2018" class="csl-entry" role="listitem">
+Chung, Heejung, and Mariska van der Horst. 2018. <span>“Women’s Employment Patterns After Childbirth and the Perceived Access to and Use of Flexitime and Teleworking.”</span> <em>Human Relations (New York)</em> 71 (1): 47–72.
+</div>
+<div id="ref-Craig2006" class="csl-entry" role="listitem">
+Craig, Lyn. 2006. <span>“Does Father Care Mean Fathers Share? A Comparison of How Mothers and Fathers in Intact Families Spend Time with Children.”</span> <em>Gender &amp; Society</em> 20 (2): 259–81.
+</div>
+<div id="ref-Craig2011a" class="csl-entry" role="listitem">
+Craig, Lyn, and Killian Mullan. 2011. <span>“How Mothers and Fathers Share Childcare: A Cross-National Time-Use Comparison.”</span> <em>American Sociological Review</em> 76 (6): 834–61.
+</div>
+<div id="ref-Craig2011" class="csl-entry" role="listitem">
+Craig, Lyn, and Abigail Powell. 2011. <span>“Non-Standard Work Schedules, Work-Family Balance and the Gendered Division of Childcare.”</span> <em>Work, Employment and Society</em> 25 (2): 274–91.
+</div>
+<div id="ref-Craig2014" class="csl-entry" role="listitem">
+Craig, Lyn, Abigail Powell, and Ciara Smyth. 2014. <span>“Towards Intensive Parenting? Changes in the Composition and Determinants of Mothers’ and Fathers’ Time with Children 1992-2006.”</span> <em>The British Journal of Sociology</em> 65 (3): 555–79.
+</div>
+<div id="ref-Diener1999" class="csl-entry" role="listitem">
+Diener, E, EM Suh, RE Lucas, and HL Smith. 1999. <span>“Subjective Well-Being: Three Decades of Progress.”</span> <em>Psychological Bulletin</em> 125 (2): 276–302.
+</div>
+<div id="ref-Fatherhood2016" class="csl-entry" role="listitem">
+Fatherhood Institute. 2016. <span>“2016 Fairness in Families Index.”</span> London: Fatherhood Institute.
+</div>
+<div id="ref-Frisco2003" class="csl-entry" role="listitem">
+Frisco, Michelle L., and Kristi Williams. 2003. <span>“Perceived Housework Equity, Marital Happiness, and Divorce in Dual-Earner Households.”</span> <em>Journal of Family Issues</em> 24 (1): 51–73.
+</div>
+<div id="ref-Gardiner2009" class="csl-entry" role="listitem">
+Gardiner, Joseph C., Zhehui Luo, and Lee Anne Roman. 2009. <span>“Fixed Effects, Random Effects and GEE: What Are the Differences?”</span> <em>Statistics in Medicine</em> 28 (2): 221–39.
+</div>
+<div id="ref-Glass2016" class="csl-entry" role="listitem">
+Glass, Jennifer, Matthew A. Andersson, and Robin W. Simon. 2016. <span>“Parenthood and Happiness: Effects of Work-Family Reconciliation Policies in 22 OECD Countries.”</span> <em>The American Journal of Sociology</em> 122 (3): 886–929.
+</div>
+<div id="ref-GEO2019" class="csl-entry" role="listitem">
+Government Equalities Office. 2019. <span>“The Case for Change: How Economic Gender Inequalities Develop Across the Life Course.”</span>
+</div>
+<div id="ref-Gracia2015" class="csl-entry" role="listitem">
+Gracia, Pablo, and Gøsta Esping-Andersen. 2015. <span>“Fathers’ Child Care Time and Mothers’ Paid Work: A Cross-National Study of Denmark, Spain, and the United Kingdom.”</span> <em>Family Science</em> 6 (1): 270–81. <a href="https://doi.org/10.1080/19424620.2015.1082336">https://doi.org/10.1080/19424620.2015.1082336</a>.
+</div>
+<div id="ref-Hochschild1989" class="csl-entry" role="listitem">
+Hochschild, Arlie Russell. 1989. <em>The Second Shift: Working Families and the Revolution at Home</em>. New York: Penguin Publishing Group.
+</div>
+<div id="ref-Huerta2014" class="csl-entry" role="listitem">
+Huerta, Maria C., Willem Adema, Jennifer Baxter, Wen-Jui Han, Mette Lausten, Raehyuck Lee, and Jane Waldfogel. 2014. <span>“Fathers’ Leave and Fathers’ Involvement: Evidence from Four OECD Countries.”</span> <em>European Journal of Social Security</em> 16 (4): 308–46.
+</div>
+<div id="ref-Kalmijn1999" class="csl-entry" role="listitem">
+Kalmijn, Matthijs. 1999. <span>“Father Involvement in Childrearing and the Perceived Stability of Marriage.”</span> <em>Journal of Marriage and Family</em> 61 (2): 409–21.
+</div>
+<div id="ref-Kroll2016" class="csl-entry" role="listitem">
+Kroll, Mary E., Claire Carson, Maggie Redshaw, and Maria A. Quigley. 2016. <span>“Early Father Involvement and Subsequent Child Behaviour at Ages 3, 5 and 7 Years: Prospective Analysis of the UK Millennium Cohort Study.”</span> <em>PloS One</em> 11 (9): e0162339–39.
+</div>
+<div id="ref-Ladge2015" class="csl-entry" role="listitem">
+Ladge, Jamie J., Beth K. Humberd, Marla Baskerville Watkins, and Brad Harrington. 2015. <span>“UPDATING THE ORGANIZATION MAN: AN EXAMINATION OF INVOLVED FATHERING IN THE WORKPLACE.”</span> <em>Academy of Management Perspectives</em> 29 (1): 152–71.
+</div>
+<div id="ref-Leslie2012" class="csl-entry" role="listitem">
+Leslie, Lisa M., Colleen Flaherty Manchester, Tae-Youn Park, and S. I. Ahn Mehng. 2012. <span>“Flexible Work Practices: A Source of Career Premiums or Penalties?”</span> 55: 1407–28. <a href="https://doi.org/10.5465/amj.2010.0651">https://doi.org/10.5465/amj.2010.0651</a>.
+</div>
+<div id="ref-Lyubomirsky2005" class="csl-entry" role="listitem">
+Lyubomirsky, Sonja, Laura King, and Ed Diener. 2005. <span>“The Benefits of Frequent Positive Affect: Does Happiness Lead to Success?”</span> <em>Psychological Bulletin</em> 131 (6): 803–55.
+</div>
+<div id="ref-Milkie2002" class="csl-entry" role="listitem">
+Milkie, Melissa A., Suzanne M. Bianchi, Marybeth J. Mattingly, and John P. Robinson. 2002. <span>“Gendered Division of Childrearing: Ideals, Realities, and the Relationship to Parental Well-Being.”</span> <em>Sex Roles</em> 47 (1-2): 21–38.
+</div>
+<div id="ref-Negraia2020" class="csl-entry" role="listitem">
+Negraia, Daniela Veronica, and Jennifer March Augustine. 2020. <span>“Unpacking the Parenting Well-Being Gap: The Role of Dynamic Features of Daily Life Across Broader Social Contexts.”</span> <em>Social Psychology Quarterly</em> 83 (3): 207–28.
+</div>
+<div id="ref-Nomaguchi2003" class="csl-entry" role="listitem">
+Nomaguchi, Kei M., and Melissa A. Milkie. 2003. <span>“Costs and Rewards of Children: The Effects of Becoming a Parent on Adults’ Lives.”</span> <em>Journal of Marriage and Family</em> 65 (2): 356–74.
+</div>
+<div id="ref-Nomaguchi2017" class="csl-entry" role="listitem">
+Nomaguchi, Kei, Susan Brown, and Tanya M. Leyman. 2017. <span>“Fathers’ Participation in Parenting and Maternal Parenting Stress: Variation by Relationship Status.”</span> <em>Journal of Family Issues</em> 38 (8): 1132–56.
+</div>
+<div id="ref-Norman2018" class="csl-entry" role="listitem">
+Norman, Helen, Mark Elliot, and Colette Fagan. 2018. <span>“Does Fathers’ Involvement in Childcare and Housework Affect Couples’ Relationship Stability?”</span> <em>Social Science Quarterly</em> 99 (5): 1599–1613.
+</div>
+<div id="ref-ONS2020" class="csl-entry" role="listitem">
+ONS. 2020. <span>“Parenting in Lockdown: Coronavirus and the Effects on Work-Life Balance.”</span> Edited by Office for National Statistics. London.
+</div>
+<div id="ref-Pressman2005" class="csl-entry" role="listitem">
+Pressman, Sarah D, and Sheldon Cohen. 2005. <span>“Does Positive Affect Influence Health?”</span> <em>Psychological Bulletin</em> 131 (6): 925–71.
+</div>
+<div id="ref-Rudman2013" class="csl-entry" role="listitem">
+Rudman, Laurie A., and Kris Mescher. 2013. <span>“Penalizing Men Who Request a Family Leave: Is Flexibility Stigma a Femininity Stigma? Feminizing Male Leave Requesters”</span> 69: 322–40. <a href="https://doi.org/10.1111/josi.12017">https://doi.org/10.1111/josi.12017</a>.
+</div>
+<div id="ref-Ruppanner2018" class="csl-entry" role="listitem">
+Ruppanner, Leah, Maria Brandén, and Jani Turunen. 2018. <span>“Does Unequal Housework Lead to Divorce? Evidence from Sweden.”</span> <em>Sociology (Oxford)</em> 52 (1): 75–94.
+</div>
+<div id="ref-Schober2012" class="csl-entry" role="listitem">
+Schober, Pia S. 2012. <span>“Paternal Child Care and Relationship Quality: A Longitudinal Analysis of Reciprocal Associations.”</span> <em>Journal of Marriage and Family</em> 74 (2): 281–96.
+</div>
+<div id="ref-Schober2013" class="csl-entry" role="listitem">
+———. 2013. <span>“Gender Equality and Outsourcing of Domestic Work, Childbearing, and Relationship Stability Among British Couples.”</span> <em>Journal of Family Issues</em> 34 (1): 25–52.
+</div>
+<div id="ref-Schober2016" class="csl-entry" role="listitem">
+Schober, Pia S., and Juliane F. Stahl. 2016. <span>“Expansion of Full-Day Childcare and Subjective Well-Being of Mothers: Interdependencies with Culture and Resources.”</span> <em>European Sociological Review</em> 32 (5): 593–606.
+</div>
+<div id="ref-Scott2013" class="csl-entry" role="listitem">
+Scott, &amp; Clery, J. 2013. <span>“Gender Roles: An Incomplete Revolution?”</span> In <em>British Social Attitudes: The 30th Report</em>, edited by A Park, C Bryson, E Clery, and J Curtice, 115–38. London: NatCen Social Research.
+</div>
+<div id="ref-Skrondal2004" class="csl-entry" role="listitem">
+Skrondal, Anders. 2004. <em>Generalized Latent Variable Modeling : Multilevel, Longitudinal, and Structural Equation Models</em>. Interdisciplinary Statistics. Boca Raton, Fla. ; Chapman &amp; Hall/CRC.
+</div>
+<div id="ref-Taylor2018" class="csl-entry" role="listitem">
+Taylor, &amp; Scott, E. A. 2018. <span>“Gender: New Consensus or Continuing Battleground?”</span> In <em>British Social Attitudes: The 35th Report</em>, edited by M. Phillips D. Phillips J. Curtice, 1–30. London: NatCen Social Research.
+</div>
+<div id="ref-Twamley2013" class="csl-entry" role="listitem">
+Twamley, Katherine, Ginny Brunton, Katy Sutcliffe, Kate Hinds, and James Thomas. 2013. <span>“Fathers’ Involvement and the Impact on Family Mental Health: Evidence from Millennium Cohort Study Analyses.”</span> <em>Community, Work &amp; Family</em> 16 (2): 212–24.
+</div>
+<div id="ref-Walzer1996" class="csl-entry" role="listitem">
+Walzer, Susan. 1996. <span>“Thinking about the Baby: Gender and Divisions of Infant Care.”</span> <em>Social Problems (Berkeley, Calif.)</em> 43 (2): 219–34.
+</div>
+<div id="ref-Warr2007" class="csl-entry" role="listitem">
+Warr, Peter. 2007. <em>Work, Happiness, and Unhappiness</em>. Mahwah, N.J: Lawrence Erlbaum.
+</div>
+<div id="ref-Working2017" class="csl-entry" role="listitem">
+Working Families. 2017. <span>“Modern Family Index.”</span> Research report. London: Working Families.
+</div>
+<div id="ref-Zeger1988" class="csl-entry" role="listitem">
+Zeger, Scott L., Kung-Yee Liang, and Paul S. Albert. 1988. <span>“Models for Longitudinal Data: A Generalized Estimating Equation Approach.”</span> <em>Biometrics</em> 44 (4): 1049–60.
+</div>
+</div></section></div></main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
