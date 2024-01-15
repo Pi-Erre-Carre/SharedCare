@@ -1,10 +1,14 @@
 ---
-title: "Shared care"
+title: "Childcare sharing and parental well-being"
+subtitle: "A time a diary approach"
 author: "Pierre Walthéry & Heejung Chung"
 date: last-modified
 date-format: "D/MM/YYYY"
 bibliography: shared_care.bib
 output: html_document
+toc: true
+toc-location: left
+
 render:
   embed-resources: true
 execute:
