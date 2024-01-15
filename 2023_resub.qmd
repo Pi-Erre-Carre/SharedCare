@@ -1,8 +1,9 @@
 ---
 title: "Shared care"
-author: "Pierre Walthéry & Heejung Chung "
-#date: "2023-06-09"
-bibliography: /home/piet/Dropbox/work/CTUR/papers/shared_care/shared_care.bib
+author: "Pierre Walthéry & Heejung Chung"
+date: last-modified
+date-format: "D/MM/YYYY"
+bibliography: shared_care.bib
 output: html_document
 execute:
   echo: false
@@ -18,7 +19,7 @@ source("syntax/data_prep_resub_2023.R")
 
 
 ## Abstract
-Sharing of childcare between mothers and fathers  has traditionally been associated with the quality of the parental relationship, and the subjective well-being (SWB) of children. Yet not much is known about its direct association with parental SWB. This may be due to shortcomings  in the current research on fathers' involvement in childcare, characterised by little distinction between types of childcare; a reliance  on stylised instruments for recording the time spent caring; operationalisation of SWB mainly  via cognitive instruments (ie life satisfaction), unlikely to be affected by variations in daily circumstances.
+Sharing of childcare between mothers and fathers  has traditionally been examined through the prism of its impact on  the parental relationship, and the subjective  well-being (SWB) of children. Yet not much is known about its direct association with parental SWB. This may be due to shortcomings  in the current research on fathers' involvement in childcare, characterised by little distinction between types of childcare; a reliance  on stylised instruments for recording the time spent caring; operationalisation of SWB mainly  via cognitive instruments (ie life satisfaction), unlikely to be affected by variations in daily circumstances.
 Using the 2015 UK Time Use Survey on a subsample of dual-earning households, we modelled the association between the precise share of several types of childcare done by fathers and the daily enjoyment levels of parents, an innovative measure of SWB. Control variables included whether activities were recorded on weekdays or at the weekend and the time spent by fathers on childcare. 
 Parental daily enjoyment was found asymmetrically associated with the share of childcare done by fathers: mothers reported an improvement when fathers took a moderate share, whereas a more substantial involvement was associated with higher levels of paternal SWB. Both were affected by the absolute amount of time parents dedicate to childcare.
 
