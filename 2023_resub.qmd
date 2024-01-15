@@ -1,6 +1,6 @@
 ---
 title: "Shared care"
-author: "Pierre Walthéry"
+author: "Pierre Walthéry & Heejung Chung "
 #date: "2023-06-09"
 bibliography: /home/piet/Dropbox/work/CTUR/papers/shared_care/shared_care.bib
 output: html_document
@@ -23,14 +23,19 @@ Using the 2015 UK Time Use Survey on a subsample of dual-earning households, we 
 Parental daily enjoyment was found asymmetrically associated with the share of childcare done by fathers: mothers reported an improvement when fathers took a moderate share, whereas a more substantial involvement was associated with higher levels of paternal SWB. Both were affected by the absolute amount of time parents dedicate to childcare.
 
 # Introduction
-Over the recent years, policymakers have shown a renewed interest for the division of caring roles between men and women in heterosexual families, and how these could be rebalanced. One driving reason for this lies in the part they play in the persistence of the gender wage gap, as the unequal division of unpaid care between men and women has been identified as its leading root (@GEO2019). The fact that women perform a ‘second shift’, as they still carry out - or are often expected to - most of the housework, household management and care roles within their families hamper their ability to compete with men on the labour market (@Hochschild1989). 
+Over the recent years, policymakers have shown  renewed interest for the division of caring roles between men and women in heterosexual families, and how these could be rebalanced. One driving reason for this lies in the part they play in the persistence of the gender wage gap, seen as a leading root of the unequal division of unpaid work between men and women  (@GEO2019). The fact that women perform a ‘second shift’, as they still carry out - or are often expected to - most of the housework, household management and care roles within their families hamper their ability to compete on equal terms with men on the labour market (@Hochschild1989). 
+
 Although there has been an increase in the amount of time fathers spend with children (@Craig2014; @Gracia2015), a trend reinforced by the Covid-19 pandemic, the gender gap in childcare persists especially during the early years of a child’s life (@Fatherhood2016; @ONS2020). At the same time, a growing number of fathers, especially among the younger generation, express the wish to be more involved in care-giving, even if this means sacrificing some of their earnings in the process (@Working2017; @Burgess2021). 
-Societal expectations requiring fathers to be breadwinners and mothers caregivers (@Scott2013; @Taylor2018) and the fear that involvement in childcare will negatively affect their career prospects (@Chung2018) explain why fathers still feel unable to contribute more. Similarly, women’s decisions to engage in paid work remain influenced by traditional gender norms, such as the view that preschool children will suffer if their mother work, and that family life suffers when a woman has a full-time job (@Scott2013). In order to alter social representations about the respective involvement of mothers and fathers in childcare, it is necessary to scrutinise the beliefs about paternal participation in childcare and its consequences.
-Previous research has challenged these norms by providing evidence of the positive outcomes for children of fathers’ involvement in childcare, (for a review, see @Allen2007a; @Chung2021) as well as for the stability of and satisfaction with the parental relationship (@Norman2018; @Schober2012, @Schober2013). 
-However, these studies restricted the measurement of father’s involvement in childcare to specific activities according to the age of their children (e.g., @Huerta2014; @Kroll2016; @Nomaguchi2017; @Norman2018; @Twamley2013). Such approaches not only overlook the actual amount of time fathers spend on childcare, but also how it is shared between parents. 
-Among contributions that rely on the time spent with children as a measure of involvement (e.g., @Baxter2011), many do not distinguish between different categories of care – e.g. routine vs non-routine, solo vs. joint care. Being able to distinguish between these is crucial in order to identify factors that may encourage fathers to dedicate more time caring as the main caregiver, which is critical in supporting mothers’ labour market participation. 
-Finally, among the limited number of studies that have focused on the well-being of parents, most (e.g. @Glass2016; @Schober2016) have relied on cognitive instruments to capture it – typically, life satisfaction. A potential downside is that these tend not to be responsive to short or medium-term changes in one’s circumstances, such as day-to day variation in the share of childcare carried out by each parent. Studies have also tended to focus directly on the negative outcomes of the division of childcare, for example, marital satisfaction and dissolution (e.g., @Frisco2003; @Norman2018; @Ruppanner2018; @Schober2012; @Schober2013), stress and negative well-being outcomes (@Milkie2002; @Nomaguchi2017) rather than investigating its broader positive and negative impacts, in particular on well-being. 
-This paper aims to fill some of these gaps; first, by exploring how the time fathers spend with children is associated with short-term variations in their well-being. We were able to do so by using an innovative instrument captured in time-diaries namely daily enjoyment, as a well-being indicator. Finally, by using the 2015 UK Time Use Survey, we were able to investigate examine the share of the time spent by fathers looking after children within the household, separately for different types of childcare. 
+
+Societal expectations requiring fathers to be breadwinners and mothers caregivers (@Scott2013; @Taylor2018) and the fear that involvement in childcare will negatively affect their career prospects (@Chung2018) explain why fathers still feel unable to contribute more. Similarly, women’s decisions to engage in paid work remain influenced by traditional gender norms, such as the view that preschool children will suffer if their mother work, and that family life is harmed  when a woman has a full-time job (@Scott2013). In order to alter social representations about the respective involvement of mothers and fathers in childcare, it is necessary to scrutinise such beliefs about paternal participation in childcare and its consequences.
+
+Previous research has challenged these norms by providing evidence of the positive outcomes for children of fathers’ involvement in childcare (for a review, see @Allen2007a; @Chung2021) as well as for the stability of and satisfaction with the parental relationship (@Norman2018; @Schober2012, @Schober2013).  However, these  restricted the measurement of fathers' involvement in childcare to a limited range of activities according to the age of their children (e.g., @Huerta2014; @Kroll2016; @Nomaguchi2017; @Norman2018; @Twamley2013). Such approaches not only overlook the actual amount of time fathers spend on childcare, but also how it is shared between parents. 
+
+Among contributions that rely on the time spent with children as a measure of involvement (e.g. @Baxter2011), many do not distinguish between different categories of care – e.g. routine vs non-routine, solo vs. joint care. Being able to distinguish between these is crucial in order to identify factors that may encourage fathers to dedicate more spent as the main caregiver, which is critical in supporting mothers’ labour market participation. 
+
+Finally, among the limited number of studies that have focused on the well-being of parents, most (e.g. @Glass2016; @Schober2016) have relied on cognitive instruments to capture it – typically, life satisfaction. A potential downside is that these tend not to be responsive to short or medium-term changes in one’s circumstances, such as day-to day variation in the share of childcare carried out by each parent. Studies have also tended to focus directly on the negative  outcomes of the division of childcare, for example, marital satisfaction and dissolution (e.g., @Frisco2003; @Norman2018; @Ruppanner2018; @Schober2012; @Schober2013), stress and negative well-being outcomes (@Milkie2002; @Nomaguchi2017) rather than investigating its broader positive and negative impacts, in particular on well-being. 
+
+This paper aims to fill some of these gaps by exploring how the time fathers spend with children is associated with short-term variations in their well-being. We were able to do so by using an innovative instrument captured in time-diaries namely daily enjoyment, as a well-being indicator. The paper also inovates by  using time diary data from the 2015 UK Time Use Survey, which enabled us to investigate the share of the precise time spent by fathers looking after children within the household, separately for different types of childcare. 
 
 # Background
 ## Typologies Of Care
@@ -58,29 +63,31 @@ Our overall hypothesis is that the greater the share of childcare taken on by fa
 
 # Data And Methods
 ## Data
-This study relies on the 2015 UK Time Use Survey (TUS). The TUS is a two-stage stratified random sample survey representative of non-institutional households in the UK. Data was collected through self-completed time diaries and face-to-face individual questionnaires. The time diaries recorded all activities in ten minutes slots over two 24h periods – one weekday and one day at the weekend. Respondents also recorded the location of activities, the presence of other people, their enjoyment level, and whether other, secondary activities took place at the same time. The diary days were randomly allocated over a period of one year and identical for all members of same household. Overall sample size is 11,421 individuals in 4,733 households. Of these, 8,210 individuals in 3,606 households provided complete time diary information.
+This study relies on the 2015 UK Time Use Survey (TUS), a two-stage stratified random sample survey representative of non-institutional households in the UK. Data was collected through self-completed time diaries and face-to-face individual questionnaires. The time diaries recorded all activities in ten minutes slots over two 24h periods – one weekday and one day at the weekend. Respondents also recorded the location of activities, the presence of other people, their enjoyment level, and whether other, secondary activities took place at the same time. Diary days were randomly allocated over a period of one year and identical for all members of same household. Overall sample size is 11,421 individuals in 4,733 households. Of these, 8,210 individuals in 3,606 households provided complete time diary information.
+
 ## Sample
-The population of reference was defined as the days (in 2014-15) of UK households made of two cohabitating heterosexual adults with at least one child aged between 0 and 14, who were both employed, and during which at least one of the two parents recorded childcare-related activities in their time diary. The analysis was conducted on a matched household sample, where data from mothers and fathers were joined together. Single parent households, and households made of several families with children or multi-generational households were not retained, as relatives could provide care for children and interfere with the parenting dynamic studied here. Actual sample size was 568 days recorded in 284 such households with non-missing information about well-being and caring for children in the time diaries (1,140 days when including those with missing information). Such a reduced size constitutes one of the main limitations of our study as it limits the power of multivariate analysis and significance testing. It nonetheless remains a valid random sample from which inferences to the days of UK households can be made, albeit with caution.
+The population of reference was defined as the days (in 2014-15) of UK households made of two cohabitating heterosexual adults with at least one child aged between 0 and 14, who were both employed, and during which at least one of the two parents recorded childcare-related activities in their time diary. The analysis was conducted on a matched household sample, where data from mothers and fathers were joined together. Single parent households, and households made of several families with children or multi-generational households were not retained, as relatives could provide care for children and interfere with the parenting dynamic studied here. 
+
+The actual sample size was for this study was `r hh.t|>tally(length(dvage.d))` days recorded in `r hh.t|>filter(daynum==1)|>tally(length(dvage.d))` such households with non-missing information about well-being and caring for children in the time diaries (1,140 days when including those with missing information). Such a reduced size constitutes one of the main limitations of our study as it limits the power of multivariate analysis and significance testing. It nonetheless remains a valid random sample from which inferences to the days of UK households can be made, albeit with caution.
 
 ## Dependent Variables
-Experienced well-being.
-Enjoyment of the activities reported in the time-diary was recorded on a scale ranging from 1 to 7. Due to limited sample size, it was decided not to break down enjoyment by types of childcare but instead to rely on an overall daily estimate. We computed it as the mean level of enjoyment of all non-resting activities over the course of a full day. For technical reasons, enjoyment in the UK TUS was only recorded from October 2014, resulting in about 25% item non-response. Another limitation of this study is therefore that sample sizes vary slightly between well-being outcomes.
- Evaluative well-being and life satisfaction. 
-In order to enable for our results to remain comparable with other studies, we also used traditional measures of cognitive well-being:
 
-- Life Satisfaction: 'Overall, how satisfied are you with your life nowadays?' Answers were recorded on a scale ranging from 0 (Not at all) to 10 (Completely). This indicator is widely used in social science. It is also currently part of the Office for National Statistics’ Personal and Economic Well-being indicators series (ONS 2019). For technical reasons, the scale of the variable was changed during fieldwork from seven to ten items. As a result, we decided to standardise then merge both variables into a single one, in order to avoid a loss of observations.
-- Work-life balance satisfaction: 'How dissatisfied or satisfied are you with your work-life/work-family balance?'
-- Satisfaction with social life: 'How dissatisfied or satisfied are you with your social life?'
+- *Experienced well-being* Enjoyment of the activities reported in the time-diary was recorded on a scale ranging from 1 to 7. Due to limited sample size, it was decided not to break down enjoyment by types of childcare but instead to rely on an overall daily estimate. We computed it as the mean level of enjoyment of all non-resting activities over the course of a full day. For technical reasons, enjoyment in the UK TUS was only recorded from October 2014, resulting in about 25% item non-response. Another limitation of this study is therefore that sample sizes vary slightly between well-being outcomes.
+
+- *Evaluative well-being and life satisfaction* In order to enable for our results to remain comparable with other studies, we also used more traditional measures of cognitive well-being:
+
+    - Life Satisfaction: 'Overall, how satisfied are you with your life nowadays?' Answers were recorded on a scale ranging from 0 (Not at all) to 10 (Completely). This indicator is widely used in social science. It is also currently part of the Office for National Statistics’ Personal and Economic Well-being indicators series (ONS 2019). For technical reasons, the scale of the variable was changed during fieldwork from seven to ten items. As a result, we decided to standardise then merge both variables into a single one, in order to avoid a loss of observations.
+    - Work-life balance satisfaction: 'How dissatisfied or satisfied are you with your work-life/work-family balance?'
+    - Satisfaction with social life: 'How dissatisfied or satisfied are you with your social life?'
 
 The latter two facets specific indicators of well-being are directly relevant to childcare and parenting, with answers ranging on as scale from 1 (Completely dissatisfied) to 7 (Completely satisfied):
 
 ## Independent variables
-*Fathers share of childcare*
 
-Our main independent variable is the amount of time spent by fathers on childcare relative to the total time spent looking after children in the household on a given day. We broke down childcare time according to the types developed above; routine vs non-routine/enrichment care (@Craig2011), as well as whether it was provided by parents on their own – i.e., solo care, again excluding joint care in our analysis. We used a fourth type, primary childcare, defined as childcare recorded as main activity in order to capture the overall association between parental well-being and the overall amount of  childcare performed. 
+*Fathers share of childcare*
+Our main independent variable is the amount of time spent by fathers on childcare relative to the total time spent looking after children in the household on a given day. We broke down childcare time according to the types developed above; routine vs non-routine/enrichment care as proposed by @Craig2011, as well as whether it was provided by parents on their own – i.e., solo care, again excluding joint care in our analysis. We used a fourth type, primary childcare, defined as childcare recorded as main activity in order to capture the overall association between parental well-being and the overall amount of  childcare performed. 
 
 Table 1 provides a description of these different types in our data. Solo care was defined as care provided the parent when the other parent was not present at the same time. 
-
 
 Category|Concept|Activities involved*
 --------|-------|--------------------
@@ -95,139 +102,152 @@ Primacy of care|Primary|Any childcare provided as the main activity by the paren
 For each one of these types, the number of minutes fathers spent caring was divided by the total caring time spent by mothers and fathers within each household then multiplied by 100. In order to account for the likely nonlinear effect of this variable on well-being, we derived a three-category ordinal version consisting of: fathers not doing any childcare on diary day (reference category); fathers taking on less than 40% of the childcare; fathers taking on 40% or more of the childcare. The cutting point was set at 40 % rather than 50% in order to alleviate the small number of fathers caring more than 50% of the time.
 
 ## Modelling Strategy
-We examined the bi- and multivariate association between the share of childcare taken on by fathers and well-being outcomes for mothers and fathers respectively, broken down by types of care. As observations consist of two days by respondent, regression results might be unreliable as the assumption of independence is violated. For this reason, we used a Generalized Estimating Equation model approach, a technique which has been shown to provide robust average estimates of the main effects (@Gardiner2009; @Zeger1988) in such cases. GEE models are robust to misspecification of the within person correlation structure of the error terms and the presence of small size cluster (@Skrondal2004). Fixed effect regression would not be appropriate here as in all but one case the outcome remains invariant within respondents and also the size of the respondent-level effect is not of substantive interest here. 
+We examined the bi- and multivariate association between the share of childcare taken on by fathers and well-being outcomes for mothers and fathers respectively, broken down by types of care. As observations consist of two days by respondent, regression results might be unreliable as the assumption of independence is violated. For this reason, we used  OLS regression with robust standard errors approach. 
 
-## Control variables
 We controlled for the socio-demographic characteristics of respondents, as they are known to influence the time spent on childcare (@Craig2011) and well-being (@Kroll2016; @Milkie2002; @Schober2012): parental education; household-level working-time configurations (one parent part-time, the other full-time, or both parents working full-time); age; and whether the day was a weekday or at the weekend. We also controlled for the absolute amount of time spent by mothers on childcare as it could influence the effect of sharing between parents. One could imagine for instance that the amount of childcare done by fathers could potentially have more impact on a day mothers are particularly busy with childcare.
 
 # Results
 
 ```{r tab2}
-tmp.r<-rbind(round(cbind(data.frame(m=t(t(prop.table(xtabs(dia_wt_a.d~nhiqual3.m,subset=daynum==1 & !is.na(car.ann.cat3),hh.t))))[1:3],
-                              d=t(t(prop.table(xtabs(dia_wt_a.d~nhiqual3.d,subset=daynum==1 & !is.na(car.ann.cat3),hh.t))))[1:3]),
-                   data.frame(n.m=t(t((xtabs(~nhiqual3.m,hh.t))))[1:3],
-                              n.d=t(t((xtabs(~nhiqual3.d,hh.t))))[1:3])),2),
+tmp.r<-rbind(round(cbind(
+              data.frame(m=t(t(100*prop.table(xtabs(dia_wt_a.d~nhiqual3.m,subset=daynum==1 & !is.na(car.ann.cat3),hh.t))))[1:3],
+                         n.m=t(t((xtabs(~nhiqual3.m,hh.t,subset=daynum==1))))[1:3],
+                         d=t(t(100*prop.table(xtabs(dia_wt_a.d~nhiqual3.d,subset=daynum==1 & !is.na(car.ann.cat3),hh.t))))[1:3],
+                         n.d=t(t((xtabs(~nhiqual3.d,hh.t,subset=daynum==1))))[1:3])
+              ),1),
              
-             round(cbind(data.frame(m=t(t(prop.table(xtabs(dia_wt_a.d~flexpt.m ,subset= !is.na(car.ann.cat3),hh.t))))[1:4],
-                              d=t(t(prop.table(xtabs(dia_wt_a.d~flexpt.d ,subset=  !is.na(car.ann.cat3),hh.t))))[1:4]),
-                   data.frame(n.m=t(t((xtabs(~flexpt.m ,subset= !is.na(car.ann.cat3),hh.t))))[1:4],
-                              n.d=t(t((xtabs(~flexpt.d ,subset=  !is.na(car.ann.cat3),hh.t))))[1:4])),2),
+             round(cbind(
+             data.frame(m=t(t(100*prop.table(xtabs(dia_wt_a.d~flexpt.m ,subset= !is.na(car.ann.cat3),hh.t))))[1:4],
+                        n.m=t(t((xtabs(~flexpt.m ,subset= !is.na(car.ann.cat3) & daynum==1,hh.t))))[1:4],
+                        d=t(t(100*prop.table(xtabs(dia_wt_a.d~flexpt.d ,subset= !is.na(car.ann.cat3),hh.t))))[1:4],
+                        n.d=t(t((xtabs(~flexpt.d ,subset=  !is.na(car.ann.cat3) & daynum==1,hh.t))))[1:4])
+             ),1),
+
              round(hh.t|>filter(!is.na(car.ann.cat3))|>summarise(m=weighted.mean(dvage.m,dia_wt_a.d,na.rm=T),
-                                                             d=weighted.mean(dvage.d,dia_wt_a.d,na.rm=T),
-                                                             n.m=sum(!is.na(dvage.m)),
-                                                             n.d=sum(!is.na(dvage.d))),1),
-             cbind(data.frame(m=round(t(t(prop.table(xtabs(dia_wt_a.d~hhftpt,subset=daynum==1,hh.t))))[1:3],2),
-                              d=rep("-",3)),
-                   data.frame(n.m=t(t((xtabs(~hhftpt,hh.t))))[1:3],
-                              n.d=rep("-",3))),
+                                                                n.m=sum(!is.na(dvage.m))/2,
+                                                                d=weighted.mean(dvage.d,dia_wt_a.d,na.rm=T),
+                                                                n.d=sum(!is.na(dvage.d))/2),1),
              
-             cbind(data.frame(m=round(t(t(prop.table(xtabs(dia_wt_a.d~agekidx.d,subset=daynum==1,hh.t))))[1:3],2),
-                                    d=rep("-",3),
-                         data.frame(n.m=t(t((xtabs(~agekidx.d,hh.t))))[1:3],
-                                    n.d=rep("-",3))))
+             cbind(
+             data.frame(m=round(t(t(100*prop.table(xtabs(dia_wt_a.d~hhftpt,subset=daynum==1,hh.t))))[1:3],1),
+                        n.m=t(t((xtabs(~hhftpt,hh.t,subset=daynum==1))))[1:3],
+                        d=rep("-",3),
+                        n.d=rep("-",3))
+             ),
+             
+             cbind(
+             data.frame(m=round(t(t(100*prop.table(xtabs(dia_wt_a.d~agekidx.d,subset=daynum==1,hh.t))))[1:3],1),
+                        n.m=t(t((xtabs(~agekidx.d,hh.t,subset=daynum==1))))[1:3],
+                        d=rep("-",3),
+                        n.d=rep("-",3)))
 )
 row.names(tmp.r)<-c("Degree","Higher education","Secondary or below",
                     "FT-No Flexible WT","FT+Flexible WT","PT-No Flexible WT","PT+Flexible WT",
                     "Age",
                     "D-FT+M-FT","D-FT+M-PT", "Other",
                     "Youngest child is 0-4","Youngest child is 5-10","Youngest child is 11-15") 
-colnames(tmp.r)<-c("Mothers", "Fathers","Moth.n","Fath.n")
+colnames(tmp.r)<-c("Mothers %", "N(mothers)","Fathers %","N(fathers)")
 
 
 htmlTable(#file="papers/shared_care/output/art_d1",
-          txtRound(tmp.r,2,excl.cols=c(3:4)),
+          txtRound(tmp.r,2),
           caption="Table 2: Sample characteristics",
           tfoot=paste0("Socio demographic characteristics of the matched 
-  household sample  N=",nrow(hh.t)," days,", length(unique(hh.t$serial))*2, " mothers and fathers,", 
-                       length(unique(hh.t$serial)), " households. Data: UK TUS 2015"))
-
+  household sample  N=",nrow(hh.t)," days,", hh.t|>filter(daynum==1)|>tally(length(dvage.d)), " mothers and fathers. Data: UK TUS 2015"))
 ```
 
-We can see that on average respondents tend to be more educated than the general population. The educational discrepancy between mothers and fathers is probably down to the fact that employed mothers tend to be more educated that those economically inactive. Also worth noting, even if unsurprising, the discrepancy between mothers and fathers in terms of flexible working-time provisions: close to 53% of households have women working some form of flexible hours (29+25%), whether on a full or part-time contract, against 38% of fathers having the same arrangements (26+2%). In most households (55%) mothers worked as secondary earner whilst fathers worked full time, against 39% of dual earner (both parents work full-time) households. Finally, 74% of households had at least one child below primary school age, which is not surprising given that these require the largest amount of caring and the sample selection required days in which as least one episode of childcare was recorded in the diary. For the same reasons, the number of households with children aged 10 or above is negligible.
+On average respondents tend to be more educated than the general population, and  mothers  more educated than fathers. This educational discrepancy  is probably down to the fact that employed mothers tend to be more educated that those economically inactive. Also worth noting, even if unsurprising, the discrepancy between mothers and fathers in terms of flexible working-time provisions: 31.1% of households have women working some form of flexible hours (18.1+13%), whether on a full or part-time contract, against 12% of fathers having the same arrangements (7.6+5.1%). In at least 35.2% of households mothers worked as secondary earner whilst fathers worked full time, against 46.2% of dual earners (both parents work full-time) households. Finally, 81% of households had at least one child below primary school age, which is not surprising given that these require the largest amount of caring and the sample selection required days in which as least one episode of childcare was recorded in the diary. For the same reasons, the number of households with children aged 10 or above is negligible.
 
-Table 3. Proportion of childcare carried out by fathers in dual-earner families by categories
 
 ```{r tab3}
   tmp.r<-rbind(
-  cbind(t(prop.table(xtabs(dia_wt_a.d~car.pri.cat3,hh.t))),round(t((xtabs(dia_wt_a.d~car.pri.cat3,hh.t))))),
-  cbind(t(prop.table(xtabs(dia_wt_a.d~car.sec.cat3,hh.t))),round(t((xtabs(dia_wt_a.d~car.sec.cat3,hh.t))))),
-  cbind(t(prop.table(xtabs(dia_wt_a.d~car.ann.cat3,hh.t))),round(t((xtabs(dia_wt_a.d~car.ann.cat3,hh.t))))),
-  cbind(t(prop.table(xtabs(dia_wt_a.d~car.aln.cat3,hh.t))),round(t((xtabs(dia_wt_a.d~car.aln.cat3,hh.t))))),
-  cbind(t(prop.table(xtabs(dia_wt_a.d~car.spo.cat3,hh.t))),round(t((xtabs(dia_wt_a.d~car.spo.cat3,hh.t))))),
-  cbind(t(prop.table(xtabs(dia_wt_a.d~car.rou.cat3,hh.t))),round(t((xtabs(dia_wt_a.d~car.rou.cat3,hh.t))))),
-  cbind(t(prop.table(xtabs(dia_wt_a.d~car.enr.cat3,hh.t))),round(t((xtabs(dia_wt_a.d~car.enr.cat3,hh.t))))))
+  cbind((t(100*prop.table(xtabs(dia_wt_a.d~car.pri.cat3,hh.t)))),round(t((xtabs(dia_wt_a.d~car.pri.cat3,hh.t,subset=daynum==1))))),
+  #cbind((t(100*prop.table(xtabs(dia_wt_a.d~car.sec.cat3,hh.t)))),round(t((xtabs(dia_wt_a.d~car.sec.cat3,hh.t,subset=daynum==1))))),
+  #cbind((t(100*prop.table(xtabs(dia_wt_a.d~car.ann.cat3,hh.t)))),round(t((xtabs(dia_wt_a.d~car.ann.cat3,hh.t,subset=daynum==1))))),
+  cbind((t(100*prop.table(xtabs(dia_wt_a.d~car.aln.cat3,hh.t)))),round(t((xtabs(dia_wt_a.d~car.aln.cat3,hh.t,subset=daynum==1))))),
+  #cbind((t(100*prop.table(xtabs(dia_wt_a.d~car.spo.cat3,hh.t)))),round(t((xtabs(dia_wt_a.d~car.spo.cat3,hh.t,subset=daynum==1))))),
+  cbind((t(100*prop.table(xtabs(dia_wt_a.d~car.rou.cat3,hh.t)))),round(t((xtabs(dia_wt_a.d~car.rou.cat3,hh.t,subset=daynum==1))))),
+  cbind((t(100*prop.table(xtabs(dia_wt_a.d~car.enr.cat3,hh.t)))),round(t((xtabs(dia_wt_a.d~car.enr.cat3,hh.t,subset=daynum==1))))))
   
-  rownames(tmp.r)<-c("Primary caring","Secondary caring","Total(any) caring","Sole caring","Joint caring","Routine caring","Enriched caring")
+  rownames(tmp.r)<-c("Primary caring",
+                     #"Secondary caring","Total(any) caring",
+                     "Sole caring",
+                     #"Joint caring",
+                     "Routine caring","Enriched caring")
   
   htmlTable(
-  txtRound(tmp.r,2,excl.cols=c(4:6)),
-  caption="Table 3: sharing of childcare between mothers and fathers",
-  tfoot="Three category proportion of the total caring time spent in the household 
-  carried out  by fathers, by type of caring. N=1,506 days, 753 mothers and
-   fathers, 377 households. Data: UK TUS 2015"
+  txtRound(tmp.r,1,excl.cols=c(4:6)),
+  caption="Table 3: sharing of childcare between mothers and fathers", 
+  tfoot=paste0("Three category proportion of the total caring time spent in the household carried out  by fathers, by type of caring. N=",nrow(hh.t)," days, ",hh.t|>filter(daynum==1)|>tally(length(dvage.d))," households. Data: UK TUS 2015")
   )
 ```
 
 
+Table 3 gives a initial overview of the sharing of childcare between fathers and mothers in the sample. We can see that in 29.7, fathers did not take part in any type of childcare on the day diaries were recorded. 70.4% (35.3+35.1) of fathers in the sample reported engaging in primary childcare, with about one third reporting taking on 40% or more of the childcare. Interestingly, identical  proportions of fathers in the sample did some routine and enriched care - 62%. This could be related to the fact that our sample is made of dual earners couples, which tend to have higher levels of qualification, and therefore fathers engaging more in childcare of any type (see also @Dotti2016).
 
-Socio-demographic characteristics of the matched household sample N= 568 days, 284 households. Data: UK TUS 2015
-
-Table 3 gives a first overview of the sharing of childcare between fathers and mothers in the sample. We can see that between 28 and 55% of fathers did not take part in any type of childcare on the day diaries were recorded. 72 % (45+27) of fathers in the sample reported engaging in primary childcare, with about one quarter reporting taking on 40% or more of the childcare. Interestingly 68% of fathers in the sample did some routine care against 52% who engaged in enriched care. This could be related to the fact that our sample is made of dual earners couples, which tend to have higher levels of qualification, and therefore fathers engaging more in childcare of any type (see also, Dotti Sani & Treas, 2016).
-Unsurprisingly, there was no type of caring that a majority of fathers undertook more than mothers. The proportion of fathers reporting at least 40% of the childcare time in households in the sample ranged from 11% (enriched caring) to 27% (primary caring). In most cases a larger proportion of fathers (between 29% and 50%) took between 1 and 40% of the total amount of care given that day. It should be noted that these proportions vary according to whether the diary was recorded on a weekday or at the weekend: whereas 25.4% of fathers in the sample reported not doing any childcare on weekdays, only 18.6% did so at the weekend (not shown).
+Unsurprisingly, there was no type of caring that a majority of fathers undertook more than mothers. The proportion of fathers reporting at least 40% of the childcare time in households in the sample ranged from 20.3% (solo caring) to 36% (joint caring). Fathers were also slightly more likely to report providing enriched and solo caring 40% and above of the time rather than less than 40% of the time (respectively, 36.8 against 26.5% and 26.9 against 20.3%). It should be noted that these proportions vary according to whether the diary was recorded on a weekday or at the weekend: whereas 25.4% of fathers in the sample reported not doing any childcare on weekdays, only 18.6% did so at the weekend (not shown).
 
 
 ```{r tab4}
     tmp.r<-rbind(
   cbind(
-  round(hh.t|>summarise(m=weighted.mean(nenjoy.d.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nenjoy.d.d,dia_wt_a.d,na.rm=T)),1),
-  hh.t|>tally(!is.na(nenjoy.d.m)),
-  hh.t|>tally(!is.na(nenjoy.d.d))),
+  round(hh.t|>summarise(m=weighted.mean(nenjoy.d.m,dia_wt_a.m,na.rm=T),
+                        hh.t|>filter(daynum==1)|>tally(!is.na(nenjoy.d.m)),
+                        d=weighted.mean(nenjoy.d.d,dia_wt_a.d,na.rm=T)),1),
+                         hh.t|>filter(daynum==1)|>tally(!is.na(nenjoy.d.d))),
 
-  cbind(
-round(hh.t|>summarise(m=weighted.mean(nhappy.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nhappy.d,dia_wt_a.d,na.rm=T)),1),
-hh.t|>tally(!is.na(nhappy.m)),
-hh.t|>tally(!is.na(nhappy.d))),
+#  cbind(
+#round(hh.t|>summarise(m=weighted.mean(nhappy.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nhappy.d,dia_wt_a.d,na.rm=T)),1),
+#hh.t|>tally(!is.na(nhappy.m)),
+#hh.t|>tally(!is.na(nhappy.d))),
 
-cbind(
-round(hh.t|>summarise(m=weighted.mean(nworth.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nworth.d,dia_wt_a.d,na.rm=T)),1),
-                       hh.t|>tally(!is.na(nworth.m)),
-                       hh.t|>tally(!is.na(nworth.d))),
+#cbind(
+#round(hh.t|>summarise(m=weighted.mean(nworth.m,dia_wt_a.m,na.rm=T),
+#                      d=weighted.mean(nworth.d,dia_wt_a.d,na.rm=T)),1),
+#                       hh.t|>tally(!is.na(nworth.m)),
+#                       hh.t|>tally(!is.na(nworth.d))),
 cbind(      
-round(hh.t|>summarise(m=weighted.mean(nsatis.st.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nsatis.st.d,dia_wt_a.d,na.rm=T)),1),
-                       hh.t|>tally(!is.na(nsatis.st.m)),
-                       hh.t|>tally(!is.na(nsatis.st.d))),
+round(hh.t|>summarise(m=weighted.mean(nsatis.st.m,dia_wt_a.m,na.rm=T),
+                      hh.t|>filter(daynum==1)|>tally(!is.na(nsatis.st.m)),
+                      d=weighted.mean(nsatis.st.d,dia_wt_a.d,na.rm=T)),2),
+                       hh.t|>filter(daynum==1)|>tally(!is.na(nsatis.st.d))),
+#cbind(
+#round(hh.t|>summarise(m=weighted.mean(nanxious.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nanxious.d,dia_wt_a.d,na.rm=T)),1),
+ #                      hh.t|>tally(!is.na(nanxious.m)),
+  #                     hh.t|>tally(!is.na(nanxious.d))),
+#cbind(
+#round(hh.t|>summarise(m=weighted.mean(nsatpart.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nsatpart.d,dia_wt_a.d,na.rm=T)),1),
+#                       hh.t|>tally(!is.na(nsatpart.m)),
+#                       hh.t|>tally(!is.na(nsatpart.d))),
 cbind(
-round(hh.t|>summarise(m=weighted.mean(nanxious.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nanxious.d,dia_wt_a.d,na.rm=T)),1),
-                       hh.t|>tally(!is.na(nanxious.m)),
-                       hh.t|>tally(!is.na(nanxious.d))),
+round(hh.t|>summarise(m=weighted.mean(nsatbal.m,dia_wt_a.m,na.rm=T),
+                      hh.t|>filter(daynum==1)|>tally(!is.na(nsatbal.m)),
+                      d=weighted.mean(nsatbal.d,dia_wt_a.d,na.rm=T)),1),
+                       hh.t|>filter(daynum==1)|>tally(!is.na(nsatbal.d))),
 cbind(
-round(hh.t|>summarise(m=weighted.mean(nsatpart.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nsatpart.d,dia_wt_a.d,na.rm=T)),1),
-                       hh.t|>tally(!is.na(nsatpart.m)),
-                       hh.t|>tally(!is.na(nsatpart.d))),
-cbind(
-round(hh.t|>summarise(m=weighted.mean(nsatbal.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nsatbal.d,dia_wt_a.d,na.rm=T)),1),
-                       hh.t|>tally(!is.na(nsatbal.m)),
-                       hh.t|>tally(!is.na(nsatbal.d))),
-cbind(
-round(hh.t|>summarise(m=weighted.mean(nsatsoc.m,dia_wt_a.m,na.rm=T),d=weighted.mean(nsatsoc.d,dia_wt_a.d,na.rm=T)),1),
-                       hh.t|>tally(!is.na(nsatsoc.m)),
-                       hh.t|>tally(!is.na(nsatsoc.d)))
+round(hh.t|>summarise(m=weighted.mean(nsatsoc.m,dia_wt_a.m,na.rm=T),
+                      hh.t|>filter(daynum==1)|>tally(!is.na(nsatsoc.m)),
+                       d=weighted.mean(nsatsoc.d,dia_wt_a.d,na.rm=T)),1),
+                       hh.t|>filter(daynum==1)|>tally(!is.na(nsatsoc.d)))
   )
-  row.names(tmp.r)<-c("Mean daily enjoyment","Happiness","Worth","Life satisfaction","Anxiety","Satisfactipn with partner","Work-life balance satisfaction","Satisfaction with social life")
-  colnames(tmp.r)<-c("Mothers", "Fathers","Moth.n","Fath.n")
+  row.names(tmp.r)<-c("Mean daily enjoyment",
+                      #"Happiness","Worth",
+                      "Life satisfaction",
+                      #"Anxiety","Satisfactipn with partner",
+                      "Work-life balance satisfaction","Satisfaction with social life")
+  colnames(tmp.r)<-c("Mothers","N(mothers)", "Fathers","N(fathers)")
   
   htmlTable(
-  txtRound(tmp.r,2,excl.cols=c(3:4)),
+  txtRound(tmp.r,2),
   caption="Table 4. Mean immediate and evaluative well-being",
-  tfoot="Mean value of wellbeing outcomes for mothers and fathers in the 
-  matched  household sample  N=1,506 days, 753 mothers and fathers, 377 
-  households. Data: UK TUS 2015 Outcomes range from 1 to 7, except for life satisfaction for which scores were standardized.")
+  tfoot=paste0("Mean value of wellbeing outcomes for mothers and fathers in the 
+  matched  household sample  N=",nrow(hh.t)," days, ",hh.t|>filter(daynum==1)|>tally(length(dvage.d))," households.  Data: UK TUS 2015. Outcomes range from 1 to 7, except for life satisfaction for which scores were standardized."))
   
 ```
 Finally, Table 4 shows an overview of the outcome variables for mothers and fathers: daily levels of enjoyment, life satisfaction, as well as satisfaction with partner and work-life balance satisfaction. Means tend to be similar albeit slightly higher for mothers. The number of observations is clearly higher for mothers than fathers with the exception of daily enjoyment.
 
 ## Multivariate Analysis
-GEE models were fitted to the data, in order to examine the association between the share of childcare taken on by fathers and parental well-being. As expected, significant positive associations were found with daily enjoyment rather than the cognitive instruments, but only for fathers. No significant association were found between fathers’ share of childcare and life satisfaction. Weaker associations (p<.1) with work-life balance satisfaction and satisfaction with social life were found, respectively positive and negative. The absolute amount of time mothers spent looking after their children (rather than their share) was found more strongly associated with maternal well-being outcomes rather than father’s share per se.
+As expected, significant positive associations were found with daily enjoyment rather than the cognitive instruments, but only for fathers. No significant association were found between fathers’ share of childcare and life satisfaction. Weaker associations (p<.1) with work-life balance satisfaction and satisfaction with social life were found, respectively positive and negative. The absolute amount of time mothers spent looking after their children (rather than their share) was found more strongly associated with maternal well-being outcomes rather than father’s share per se.
 
 ###	Mothers
 Table 5 shows no significant association between the well-being of mothers and the share of childcare done by fathers, once socio-demographic variables, as well as the absolute amount of time they spend on childcare are controlled for. Rather unexpectedly, the daily enjoyment of mothers increased with the time they spent on solo and enrichment childcare, in the latter case a strongly significant relationship (respectively .09 p<.05 and .12 p<001). A similar result was observed with life satisfaction and the time mothers spent on routine childcare. In other words, the actual time mothers dedicate to childcare seems to have a more significant impact on their well-being than the share that is done by fathers. 
