@@ -5,6 +5,8 @@ date: last-modified
 date-format: "D/MM/YYYY"
 bibliography: shared_care.bib
 output: html_document
+render:
+  embed-resources: true
 execute:
   echo: false
   warning: false
