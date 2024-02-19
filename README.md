@@ -1,2 +1,2 @@
 # Shared Care and Well-Being Outcomes
-Source repository for the Chung and Walthery paper.
+Source repository for the Walthéry and Chung paper.
