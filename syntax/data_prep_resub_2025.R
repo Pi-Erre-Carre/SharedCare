@@ -92,11 +92,14 @@ ind.tus15$pid<-((ind.tus15$serial*100)+ind.tus15$pnum)
 		    mutate(nrchi015=sum(ischi015),rn=row_number())%>%ungroup()%>%filter(rn==1)%>%select(-ischi015),
 		  by="serial",all.x=T,all.y=F)
   
-   ind.tus15$ischi1618<-ifelse(ind.tus15$dvage>=16 & ind.tus15$dvage<19 & (as_factor(ind.tus15$worksta)=="Full-time student" | as_factor(ind.tus15$worksta)=="On a government training scheme"),"16-18,FT Student","Not")
+   ind.tus15$ischi1618<-ifelse(ind.tus15$dvage>=16 & ind.tus15$dvage<19 & (as_factor(ind.tus15$worksta)=="Full-time student" | 
+                             as_factor(ind.tus15$worksta)=="On a government training scheme"),"16-18,FT Student","Not")
   
 
 #### 16-18, not in FTE, not 
-		   ind.tus15$ischi1618<-ifelse(ind.tus15$dvage>=16 & ind.tus15$dvage<19 & (as_factor(ind.tus15$worksta)=="Full-time student" | as_factor(ind.tus15$worksta)=="On a government training scheme") & as_factor(ind.tus15$dmarsta)!="Married/cohabitating",1,0)
+		   ind.tus15$ischi1618<-ifelse(ind.tus15$dvage>=16 & ind.tus15$dvage<19 & (as_factor(ind.tus15$worksta)=="Full-time student" | 
+		                                as_factor(ind.tus15$worksta)=="On a government training scheme") & 
+		                                 as_factor(ind.tus15$dmarsta)!="Married/cohabitating",1,0)
 		   		   ind.tus15<-merge(ind.tus15,
 				   ind.tus15%>%select(serial,ischi1618)%>%
 				               group_by(serial)%>%
@@ -389,8 +392,10 @@ ep.chap15<-read_dta("Data/tus/epis_chap0015.dta") %>% filter(year==2015 ) %>% se
 
   ep.chap15<-ep.chap15%>%mutate(slp.pri.d=ifelse(whatdoing==0 | whatdoing==110 | whatdoing==5310,eptime,0),
                                 any.pri.d=ifelse(whatdoing!=0 & whatdoing!=110 & whatdoing!=5310 & !is.na(whatdoing),eptime,0),
-                                car.pri.d=ifelse(whatdoing>=3800 & whatdoing<3900 & as_factor(withchild)=="Reported" & !(what_oth1>=3800 & what_oth1<3900),eptime,0), 
-  							  car.sec.d=ifelse(what_oth1>=3800 & what_oth1<3900 & as_factor(withchild)=="Reported" & !(whatdoing>=3800 & whatdoing<3900),eptime,0),
+                                car.pri.d=ifelse(whatdoing>=3800 & whatdoing<3900 & as_factor(withchild)=="Reported" & 
+                                                   !(what_oth1>=3800 & what_oth1<3900),eptime,0), 
+  							  car.sec.d=ifelse(what_oth1>=3800 & what_oth1<3900 & as_factor(withchild)=="Reported" & 
+  							                     !(whatdoing>=3800 & whatdoing<3900),eptime,0),
                                 car.copr.d=ifelse(as_factor(withchild)=="Reported" & car.pri.d==0 & car.sec.d==0,eptime,0),
   							  car.ann.d=ifelse(car.pri.d>0 | car.sec.d>0  ,eptime,0),
   							  car.anw.d=ifelse(car.pri.d>0 | car.sec.d>0 | car.copr.d >0 ,eptime,0),
@@ -491,22 +496,27 @@ ep.chap15<-read_dta("Data/tus/epis_chap0015.dta") %>% filter(year==2015 ) %>% se
   
   #### Getting the data
   t.m<-ep.chap15%>%filter(as_factor(sex)=="Female" & epn==1 & age>16) %>%             #& (dow=="Saturday" | dow=="Sunday")) 
-  		select(serial,pnum,daynum,wee,any.pri.t:both.t,nenjoy.d,enj.pri.m,enj.aln.m,enj.rou.m,enj.enr.m,rush_d,sex,dia_wt_a)
+  		            select(serial,pnum,daynum,wee,any.pri.t:both.t,nenjoy.d,enj.pri.m,enj.aln.m,enj.rou.m,
+  		                   enj.enr.m,rush_d,sex,dia_wt_a)
   
-  t.m<-merge(t.m,ind.tus15%>%
+   t.m<-merge(t.m,ind.tus15%>%
                select(serial,pnum,agekidx,ccare.d,dvage,flexpt,Income,inpdw,nhiqual3,
-                       nhiqual4,nsect,nanxious,nhappy,nsatbal,nsathlth,nsatpart,nsatsoc,nworth,nhappy.st,nsatbal.st, 
-  				                  nsatis.st ,nsatpart.st, nsk4, npar,sectfl,slfl,wflex,wftpt),
-  		   by=c("serial","pnum"),all.x=F,all.y=T)%>%distinct()	
+                       nhiqual4,nsect,nanxious,nhappy,nsatbal,nsathlth,nsatpart,nsatsoc,
+                      nworth,nhappy.st,nsatbal.st, nsatis.st ,nsatpart.st, nsk4, npar,sectfl,
+                      slfl,wflex,wftpt),
+  		   by=c("serial","pnum"),all.x=F,all.y=T)%>%
+        distinct()	
   
   ## dad (any day)
   t.d<-ep.chap15%>%filter(as_factor(sex)=="Male" & epn==1 & age>16)%>% 
-    select(serial,daynum,pnum,wee,any.pri.t:both.r,nenjoy.d,enj.pri.m,enj.aln.m,enj.rou.m,enj.enr.m,rush_d,sex,dia_wt_a)
+                   select(serial,daynum,pnum,wee,any.pri.t:both.r,nenjoy.d,enj.pri.m,enj.aln.m,enj.rou.m,
+                          enj.enr.m,rush_d,sex,dia_wt_a)
   
   t.d<-merge(t.d,ind.tus15%>%select(serial,pnum,agekidx,ccare.d,dvage,flexpt,Income,inpdw,nhiqual3,
-                                                   nhiqual4,nsect,nanxious,nhappy,nsatbal,nsathlth,nsatpart,nsatsoc,nworth,nhappy.st,nsatbal.st, 
-                                                   nsatis.st ,nsatpart.st, nsk4, npar,sectfl,slfl,wflex,wftpt),
-		  by=c("serial","pnum"),all.x=F,all.y=T)%>%distinct()	
+                                    nhiqual4,nsect,nanxious,nhappy,nsatbal,nsathlth,nsatpart,nsatsoc,
+                                    nworth,nhappy.st,nsatbal.st,nsatis.st ,nsatpart.st, nsk4, npar,
+                                    sectfl,slfl,wflex,wftpt),
+		        by=c("serial","pnum"),all.x=F,all.y=T)%>%distinct()	
   
      
   names(t.m)[4:ncol(t.m)]<-paste0(names(t.m)[4:ncol(t.m)],'.m')
@@ -554,7 +564,8 @@ hh.t$car.aln.rat<-ifelse(hh.t$car.aln.rat>1,1,hh.t$car.aln.rat)
   		                        car.aln.rat>=.4 & car.aln.rat<1~'>=40%', car.aln.rat>=1   ~ "M don't care"),
   		car.spo.cat = case_when(car.spo.rat == 0 ~ " Not caring",car.spo.rat> 0 & car.spo.rat< .4 ~ '<40%',
   		                        car.spo.rat>=.4 & car.spo.rat<1~'>=40%', car.spo.rat>=1   ~ "M don't care"),
-  		car.rou.cat = case_when(car.rou.rat == 0 ~ " Not caring",car.rou.rat> 0 & car.rou.rat< .4 ~ '<40%',car.rou.rat>=.4 & car.rou.rat<1~'>=40%', car.rou.rat>=1  ~ "M don't care"),
+  		car.rou.cat = case_when(car.rou.rat == 0 ~ " Not caring",car.rou.rat> 0 & car.rou.rat< .4 ~ '<40%',
+  		                        car.rou.rat>=.4 & car.rou.rat<1~'>=40%', car.rou.rat>=1  ~ "M don't care"),
   		car.enr.cat = case_when(car.enr.rat == 0 ~ " Not caring",car.enr.rat> 0 & car.enr.rat< .4 ~ '<40%',
   		                        car.enr.rat>=.4 & car.enr.rat<1~'>=40%', car.enr.rat>=1   ~ "M don't care"),
   		car.pri.cat3 = case_when(car.pri.rat == 0 ~ " Not caring",car.pri.rat> 0 & car.pri.rat< .4 ~ '<40%',
@@ -594,15 +605,17 @@ hh.t$car.aln.rat<-ifelse(hh.t$car.aln.rat>1,1,hh.t$car.aln.rat)
 						
 						
 						
-  						#### Household-level parental working-time configurations
+#### Household-level parental working-time configurations
   hh.t<-hh.t%>% mutate(hhftpt= as.factor(paste(wftpt.d, wftpt.m,sep=" ")))
   hh.t$hhftpt<-as.character(hh.t$hhftpt)
   hh.t$hhftpt<-ifelse(hh.t$hhftpt=="Full-time Full-time" | hh.t$hhftpt=="Full-time Not in paid work" | hh.t$hhftpt=="Full-time Part-time",hh.t$hhftpt,"Other")
   hh.t$hhftpt<-as.factor(hh.t$hhftpt)
   levels(hh.t$hhftpt)<-c("D-FT+M-FT","D-FT+M-NIPW","D-FT+M-PT","Other")
   
-  ##### FINAL POPULATION SELECTION (Households with two parents in paid work and no missing information on primary and secondary childcare 
-  hh.t2<-hh.t
+  ##### FINAL POPULATION SELECTION (Households with two parents in paid work 
+  ##### and no missing information on primary and secondary childcare 
+
+#hh.t2<-hh.t
 #  hh.t<-droplevels(hh.t%>%filter(inpdw.m=="In paid work" & inpdw.d=="In paid work" & !is.na(car.ann.cat3) & !is.na(nhiqual3.d) ))
  hh.t<-droplevels(hh.t%>%filter(!is.na(car.ann.cat3) ))
   
