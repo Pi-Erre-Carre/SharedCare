@@ -175,7 +175,7 @@ Primacy of care|Primary|Any childcare provided as the main activity by the paren
 For each one of these types, the number of minutes fathers spent caring was divided by the total caring time spent by mothers and fathers within each household then multiplied by 100. In order to account for the likely nonlinear effect of this variable on well-being, we derived a three-category ordinal version consisting of: fathers not doing any childcare on diary day (reference category); fathers taking on less than 40% of the childcare; fathers taking on 40% or more of the childcare. The cutting point was set at 40 % rather than 50% in order to alleviate the small number of fathers caring more than 50% of the time.
 
 ## Modelling Strategy
-We examined both bivariate and multivariate associations between paternal share of childcare and parental well-being outcomes, broken down by type of care. As each respondent contributed two diary days, we estimated OLS regressions with robust standard errors using the estimatr package in R (@Blair2024).
+We examined both bivariate and multivariate associations between paternal share of childcare and parental well-being outcomes, broken down by type of care. As each respondent contributed two diary days, we estimated OLS regressions with robust standard errors using the *estimatr* package in R [@Blair2024].
 
 We controlled for the socio-demographic characteristics of respondents, as they are known to influence the time spent on childcare (@Craig2011) and well-being (@Kroll2016; @Milkie2002; @Schober2012). Control variables included:
 
